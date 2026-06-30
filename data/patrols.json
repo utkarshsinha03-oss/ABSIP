@@ -1,0 +1,110 @@
+[
+  {
+    "patrol_id": "P001",
+    "patrol_name": "Patrol Unit 1",
+    "assigned_sector": "S006",
+    "status": "Active",
+    "team_size": 7,
+    "vehicle_type": "Helicopter",
+    "fuel_level_percent": 81,
+    "shift": "Morning",
+    "communication_channel": "CH-5",
+    "last_check_in": "2026-06-30T10:17:29Z"
+  },
+  {
+    "patrol_id": "P002",
+    "patrol_name": "Patrol Unit 2",
+    "assigned_sector": "S004",
+    "status": "Active",
+    "team_size": 7,
+    "vehicle_type": "Armored Vehicle",
+    "fuel_level_percent": 44,
+    "shift": "Evening",
+    "communication_channel": "CH-1",
+    "last_check_in": "2026-06-30T08:30:27Z"
+  },
+  {
+    "patrol_id": "P003",
+    "patrol_name": "Patrol Unit 3",
+    "assigned_sector": "S026",
+    "status": "Active",
+    "team_size": 8,
+    "vehicle_type": "Motorcycle",
+    "fuel_level_percent": 81,
+    "shift": "Evening",
+    "communication_channel": "CH-7",
+    "last_check_in": "2026-06-30T01:03:34Z"
+  },
+  {
+    "patrol_id": "P004",
+    "patrol_name": "Patrol Unit 4",
+    "assigned_sector": "S009",
+    "status": "Active",
+    "team_size": 6,
+    "vehicle_type": "Armored Vehicle",
+    "fuel_level_percent": 83,
+    "shift": "Morning",
+    "communication_channel": "CH-5",
+    "last_check_in": "2026-06-30T18:15:00Z"
+  },
+  {
+    "patrol_id": "P005",
+    "patrol_name": "Patrol Unit 5",
+    "assigned_sector": "S042",
+    "status": "Active",
+    "team_size": 8,
+    "vehicle_type": "Motorcycle",
+    "fuel_level_percent": 85,
+    "shift": "Morning",
+    "communication_channel": "CH-2",
+    "last_check_in": "2026-06-30T01:23:38Z"
+  },
+  {
+    "patrol_id": "P006",
+    "patrol_name": "Patrol Unit 6",
+    "assigned_sector": "S030",
+    "status": "Standby",
+    "team_size": 8,
+    "vehicle_type": "Helicopter",
+    "fuel_level_percent": 84,
+    "shift": "Night",
+    "communication_channel": "CH-3",
+    "last_check_in": "2026-06-29T05:47:29Z"
+  },
+  {
+    "patrol_id": "P007",
+    "patrol_name": "Patrol Unit 7",
+    "assigned_sector": "S029",
+    "status": "Active",
+    "team_size": 4,
+    "vehicle_type": "ATV",
+    "fuel_level_percent": 84,
+    "shift": "Night",
+    "communication_channel": "CH-1",
+    "last_check_in": "2026-06-28T22:59:19Z"
+  },
+  {
+    "patrol_id": "P008",
+    "patrol_name": "Patrol Unit 8",
+    "assigned_sector": "S033",
+    "status": "Active",
+    "team_size": 7,
+    "vehicle_type": "Helicopter",
+    "fuel_level_percent": 76,
+    "shift": "Morning",
+    "communication_channel": "CH-1",
+    "last_check_in": "2026-06-28T23:51:57Z"
+  },
+  {
+    "patrol_id": "P009",
+    "patrol_name": "Patrol Unit 9",
+    "assigned_sector": "S038",
+    "status": "Active",
+    "team_size": 8,
+    "vehicle_type": "Jeep",
+    "fuel_level_percent": 48,
+    "shift": "Night",
+    "communication_channel": "CH-9",
+    "last_check_in": "2026-06-29T07:41:59Z"
+  }
+]

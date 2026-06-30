@@ -1,0 +1,902 @@
+[
+  {
+    "sensor_id": "SEN0001",
+    "sector_id": "S001",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2025-10-23T06:35:10Z",
+    "last_maintenance_date": "2026-06-12T07:48:08Z"
+  },
+  {
+    "sensor_id": "SEN0002",
+    "sector_id": "S002",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-02-09T09:59:55Z",
+    "last_maintenance_date": "2026-01-14T00:14:07Z"
+  },
+  {
+    "sensor_id": "SEN0003",
+    "sector_id": "S003",
+    "sensor_type": "Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 250,
+    "installed_date": "2025-12-31T23:41:35Z",
+    "last_maintenance_date": "2026-06-18T04:59:06Z"
+  },
+  {
+    "sensor_id": "SEN0004",
+    "sector_id": "S004",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2024-08-16T05:39:26Z",
+    "last_maintenance_date": "2026-04-10T07:35:12Z"
+  },
+  {
+    "sensor_id": "SEN0005",
+    "sector_id": "S005",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2025-03-31T16:27:09Z",
+    "last_maintenance_date": "2026-03-01T07:58:16Z"
+  },
+  {
+    "sensor_id": "SEN0006",
+    "sector_id": "S006",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Offline",
+    "detection_range_m": 500,
+    "installed_date": "2025-01-13T06:34:49Z",
+    "last_maintenance_date": "2026-04-21T08:10:19Z"
+  },
+  {
+    "sensor_id": "SEN0007",
+    "sector_id": "S007",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2025-08-07T05:09:56Z",
+    "last_maintenance_date": "2026-05-23T14:50:20Z"
+  },
+  {
+    "sensor_id": "SEN0008",
+    "sector_id": "S008",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Maintenance",
+    "detection_range_m": 100,
+    "installed_date": "2025-05-02T08:53:30Z",
+    "last_maintenance_date": "2026-03-03T09:11:51Z"
+  },
+  {
+    "sensor_id": "SEN0009",
+    "sector_id": "S009",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2024-07-18T21:20:08Z",
+    "last_maintenance_date": "2026-02-03T09:45:04Z"
+  },
+  {
+    "sensor_id": "SEN0010",
+    "sector_id": "S010",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-04-27T04:27:17Z",
+    "last_maintenance_date": "2026-02-11T02:17:50Z"
+  },
+  {
+    "sensor_id": "SEN0011",
+    "sector_id": "S011",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-02-18T21:50:43Z",
+    "last_maintenance_date": "2026-01-10T00:23:39Z"
+  },
+  {
+    "sensor_id": "SEN0012",
+    "sector_id": "S012",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Offline",
+    "detection_range_m": 250,
+    "installed_date": "2024-10-01T05:13:06Z",
+    "last_maintenance_date": "2026-03-22T03:38:22Z"
+  },
+  {
+    "sensor_id": "SEN0013",
+    "sector_id": "S013",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2026-02-12T08:04:01Z",
+    "last_maintenance_date": "2026-04-25T09:54:51Z"
+  },
+  {
+    "sensor_id": "SEN0014",
+    "sector_id": "S014",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-09-19T08:58:11Z",
+    "last_maintenance_date": "2026-06-10T07:13:17Z"
+  },
+  {
+    "sensor_id": "SEN0015",
+    "sector_id": "S015",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2025-11-13T02:10:15Z",
+    "last_maintenance_date": "2026-01-15T20:27:03Z"
+  },
+  {
+    "sensor_id": "SEN0016",
+    "sector_id": "S016",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2024-10-02T17:59:56Z",
+    "last_maintenance_date": "2026-03-01T01:07:28Z"
+  },
+  {
+    "sensor_id": "SEN0017",
+    "sector_id": "S017",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2025-06-18T16:36:26Z",
+    "last_maintenance_date": "2026-06-01T16:55:58Z"
+  },
+  {
+    "sensor_id": "SEN0018",
+    "sector_id": "S018",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2024-11-18T00:16:40Z",
+    "last_maintenance_date": "2026-03-21T00:03:00Z"
+  },
+  {
+    "sensor_id": "SEN0019",
+    "sector_id": "S019",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Maintenance",
+    "detection_range_m": 250,
+    "installed_date": "2026-03-17T23:25:45Z",
+    "last_maintenance_date": "2026-01-06T02:23:57Z"
+  },
+  {
+    "sensor_id": "SEN0020",
+    "sector_id": "S020",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Maintenance",
+    "detection_range_m": 500,
+    "installed_date": "2025-01-01T08:32:41Z",
+    "last_maintenance_date": "2026-06-13T05:33:43Z"
+  },
+  {
+    "sensor_id": "SEN0021",
+    "sector_id": "S021",
+    "sensor_type": "Camera",
+    "operational_status": "Offline",
+    "detection_range_m": 750,
+    "installed_date": "2026-03-14T08:51:24Z",
+    "last_maintenance_date": "2026-03-05T00:05:37Z"
+  },
+  {
+    "sensor_id": "SEN0022",
+    "sector_id": "S022",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Maintenance",
+    "detection_range_m": 500,
+    "installed_date": "2024-10-08T04:25:34Z",
+    "last_maintenance_date": "2026-03-03T08:22:18Z"
+  },
+  {
+    "sensor_id": "SEN0023",
+    "sector_id": "S023",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2026-04-03T13:18:36Z",
+    "last_maintenance_date": "2026-04-29T07:38:25Z"
+  },
+  {
+    "sensor_id": "SEN0024",
+    "sector_id": "S024",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-08-02T16:43:51Z",
+    "last_maintenance_date": "2026-04-01T13:53:47Z"
+  },
+  {
+    "sensor_id": "SEN0025",
+    "sector_id": "S025",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Maintenance",
+    "detection_range_m": 500,
+    "installed_date": "2024-12-08T21:41:52Z",
+    "last_maintenance_date": "2026-06-09T14:28:38Z"
+  },
+  {
+    "sensor_id": "SEN0026",
+    "sector_id": "S026",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2024-07-23T06:33:19Z",
+    "last_maintenance_date": "2026-02-25T07:25:03Z"
+  },
+  {
+    "sensor_id": "SEN0027",
+    "sector_id": "S027",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2024-07-22T14:55:22Z",
+    "last_maintenance_date": "2026-02-02T10:44:29Z"
+  },
+  {
+    "sensor_id": "SEN0028",
+    "sector_id": "S028",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2025-07-27T10:30:35Z",
+    "last_maintenance_date": "2026-04-22T12:58:50Z"
+  },
+  {
+    "sensor_id": "SEN0029",
+    "sector_id": "S029",
+    "sensor_type": "Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 500,
+    "installed_date": "2026-02-27T22:40:16Z",
+    "last_maintenance_date": "2026-01-05T17:02:51Z"
+  },
+  {
+    "sensor_id": "SEN0030",
+    "sector_id": "S030",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2025-01-09T02:56:58Z",
+    "last_maintenance_date": "2026-05-12T13:00:41Z"
+  },
+  {
+    "sensor_id": "SEN0031",
+    "sector_id": "S031",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2026-02-21T14:13:01Z",
+    "last_maintenance_date": "2026-02-09T12:30:56Z"
+  },
+  {
+    "sensor_id": "SEN0032",
+    "sector_id": "S032",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2024-11-20T12:44:34Z",
+    "last_maintenance_date": "2026-03-10T12:04:01Z"
+  },
+  {
+    "sensor_id": "SEN0033",
+    "sector_id": "S033",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Offline",
+    "detection_range_m": 750,
+    "installed_date": "2026-03-06T19:49:33Z",
+    "last_maintenance_date": "2026-06-12T03:34:21Z"
+  },
+  {
+    "sensor_id": "SEN0034",
+    "sector_id": "S034",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2025-08-23T19:59:57Z",
+    "last_maintenance_date": "2026-02-08T08:36:26Z"
+  },
+  {
+    "sensor_id": "SEN0035",
+    "sector_id": "S035",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2025-06-06T07:16:36Z",
+    "last_maintenance_date": "2026-04-15T03:47:45Z"
+  },
+  {
+    "sensor_id": "SEN0036",
+    "sector_id": "S036",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Maintenance",
+    "detection_range_m": 1000,
+    "installed_date": "2026-03-21T15:34:51Z",
+    "last_maintenance_date": "2026-04-24T01:09:54Z"
+  },
+  {
+    "sensor_id": "SEN0037",
+    "sector_id": "S037",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2026-01-21T21:48:36Z",
+    "last_maintenance_date": "2026-01-05T02:44:46Z"
+  },
+  {
+    "sensor_id": "SEN0038",
+    "sector_id": "S038",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2024-07-11T08:10:21Z",
+    "last_maintenance_date": "2026-05-02T13:24:14Z"
+  },
+  {
+    "sensor_id": "SEN0039",
+    "sector_id": "S039",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Maintenance",
+    "detection_range_m": 250,
+    "installed_date": "2025-04-21T18:40:50Z",
+    "last_maintenance_date": "2026-01-16T17:16:47Z"
+  },
+  {
+    "sensor_id": "SEN0040",
+    "sector_id": "S040",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2025-08-20T02:27:12Z",
+    "last_maintenance_date": "2026-02-05T12:46:57Z"
+  },
+  {
+    "sensor_id": "SEN0041",
+    "sector_id": "S041",
+    "sensor_type": "Radar",
+    "operational_status": "Maintenance",
+    "detection_range_m": 750,
+    "installed_date": "2025-09-25T05:40:33Z",
+    "last_maintenance_date": "2026-03-10T19:37:02Z"
+  },
+  {
+    "sensor_id": "SEN0042",
+    "sector_id": "S042",
+    "sensor_type": "Radar",
+    "operational_status": "Maintenance",
+    "detection_range_m": 1000,
+    "installed_date": "2025-10-17T22:09:50Z",
+    "last_maintenance_date": "2026-01-09T03:38:03Z"
+  },
+  {
+    "sensor_id": "SEN0043",
+    "sector_id": "S043",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2025-03-06T05:33:36Z",
+    "last_maintenance_date": "2026-04-20T16:37:37Z"
+  },
+  {
+    "sensor_id": "SEN0044",
+    "sector_id": "S044",
+    "sensor_type": "Radar",
+    "operational_status": "Offline",
+    "detection_range_m": 750,
+    "installed_date": "2025-07-09T08:53:44Z",
+    "last_maintenance_date": "2026-01-10T18:20:54Z"
+  },
+  {
+    "sensor_id": "SEN0045",
+    "sector_id": "S045",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-09-08T00:49:12Z",
+    "last_maintenance_date": "2026-02-10T20:45:59Z"
+  },
+  {
+    "sensor_id": "SEN0046",
+    "sector_id": "S046",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2025-05-13T05:23:04Z",
+    "last_maintenance_date": "2026-01-13T04:45:38Z"
+  },
+  {
+    "sensor_id": "SEN0047",
+    "sector_id": "S047",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2024-10-01T06:34:36Z",
+    "last_maintenance_date": "2026-06-17T15:57:29Z"
+  },
+  {
+    "sensor_id": "SEN0048",
+    "sector_id": "S048",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Offline",
+    "detection_range_m": 750,
+    "installed_date": "2024-07-15T07:08:03Z",
+    "last_maintenance_date": "2026-01-20T02:23:49Z"
+  },
+  {
+    "sensor_id": "SEN0049",
+    "sector_id": "S049",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2024-12-12T09:09:50Z",
+    "last_maintenance_date": "2026-06-01T08:07:23Z"
+  },
+  {
+    "sensor_id": "SEN0050",
+    "sector_id": "S050",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2025-01-24T23:57:38Z",
+    "last_maintenance_date": "2026-02-27T06:59:35Z"
+  },
+  {
+    "sensor_id": "SEN0051",
+    "sector_id": "S044",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2025-01-25T22:18:56Z",
+    "last_maintenance_date": "2026-06-13T13:25:14Z"
+  },
+  {
+    "sensor_id": "SEN0052",
+    "sector_id": "S036",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Offline",
+    "detection_range_m": 1000,
+    "installed_date": "2025-09-30T21:56:18Z",
+    "last_maintenance_date": "2026-04-15T03:37:22Z"
+  },
+  {
+    "sensor_id": "SEN0053",
+    "sector_id": "S041",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-07-12T11:39:16Z",
+    "last_maintenance_date": "2026-02-11T09:45:05Z"
+  },
+  {
+    "sensor_id": "SEN0054",
+    "sector_id": "S027",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Offline",
+    "detection_range_m": 250,
+    "installed_date": "2024-11-22T10:00:10Z",
+    "last_maintenance_date": "2026-03-17T20:54:17Z"
+  },
+  {
+    "sensor_id": "SEN0055",
+    "sector_id": "S041",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2025-02-08T21:06:32Z",
+    "last_maintenance_date": "2026-01-30T11:19:58Z"
+  },
+  {
+    "sensor_id": "SEN0056",
+    "sector_id": "S038",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2026-06-14T23:05:38Z",
+    "last_maintenance_date": "2026-01-14T18:10:34Z"
+  },
+  {
+    "sensor_id": "SEN0057",
+    "sector_id": "S021",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 750,
+    "installed_date": "2024-09-03T19:20:43Z",
+    "last_maintenance_date": "2026-01-09T04:50:44Z"
+  },
+  {
+    "sensor_id": "SEN0058",
+    "sector_id": "S041",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2025-11-02T01:31:06Z",
+    "last_maintenance_date": "2026-04-18T14:27:59Z"
+  },
+  {
+    "sensor_id": "SEN0059",
+    "sector_id": "S036",
+    "sensor_type": "Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 100,
+    "installed_date": "2025-04-02T16:30:45Z",
+    "last_maintenance_date": "2026-06-23T20:54:14Z"
+  },
+  {
+    "sensor_id": "SEN0060",
+    "sector_id": "S006",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2026-02-01T14:41:38Z",
+    "last_maintenance_date": "2026-02-06T00:24:53Z"
+  },
+  {
+    "sensor_id": "SEN0061",
+    "sector_id": "S016",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2024-10-04T00:59:33Z",
+    "last_maintenance_date": "2026-02-01T18:00:35Z"
+  },
+  {
+    "sensor_id": "SEN0062",
+    "sector_id": "S021",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2025-03-11T12:31:30Z",
+    "last_maintenance_date": "2026-05-21T19:46:42Z"
+  },
+  {
+    "sensor_id": "SEN0063",
+    "sector_id": "S047",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 750,
+    "installed_date": "2024-07-24T13:45:10Z",
+    "last_maintenance_date": "2026-04-14T15:50:10Z"
+  },
+  {
+    "sensor_id": "SEN0064",
+    "sector_id": "S041",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2025-06-28T03:56:20Z",
+    "last_maintenance_date": "2026-04-16T21:21:22Z"
+  },
+  {
+    "sensor_id": "SEN0065",
+    "sector_id": "S033",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2024-10-17T22:43:11Z",
+    "last_maintenance_date": "2026-04-18T14:36:13Z"
+  },
+  {
+    "sensor_id": "SEN0066",
+    "sector_id": "S031",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Maintenance",
+    "detection_range_m": 1000,
+    "installed_date": "2025-10-17T00:26:18Z",
+    "last_maintenance_date": "2026-01-13T00:21:56Z"
+  },
+  {
+    "sensor_id": "SEN0067",
+    "sector_id": "S014",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2026-05-27T03:51:18Z",
+    "last_maintenance_date": "2026-05-28T19:16:46Z"
+  },
+  {
+    "sensor_id": "SEN0068",
+    "sector_id": "S027",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2024-12-25T10:41:32Z",
+    "last_maintenance_date": "2026-04-22T16:58:06Z"
+  },
+  {
+    "sensor_id": "SEN0069",
+    "sector_id": "S041",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 500,
+    "installed_date": "2026-03-05T08:10:55Z",
+    "last_maintenance_date": "2026-05-04T00:28:21Z"
+  },
+  {
+    "sensor_id": "SEN0070",
+    "sector_id": "S033",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2026-06-16T13:40:57Z",
+    "last_maintenance_date": "2026-03-06T10:31:17Z"
+  },
+  {
+    "sensor_id": "SEN0071",
+    "sector_id": "S021",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2026-03-12T01:00:34Z",
+    "last_maintenance_date": "2026-06-24T02:18:29Z"
+  },
+  {
+    "sensor_id": "SEN0072",
+    "sector_id": "S027",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2024-09-18T07:16:20Z",
+    "last_maintenance_date": "2026-04-14T01:48:57Z"
+  },
+  {
+    "sensor_id": "SEN0073",
+    "sector_id": "S015",
+    "sensor_type": "Camera",
+    "operational_status": "Offline",
+    "detection_range_m": 500,
+    "installed_date": "2025-02-11T19:08:49Z",
+    "last_maintenance_date": "2026-02-13T17:50:35Z"
+  },
+  {
+    "sensor_id": "SEN0074",
+    "sector_id": "S031",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2025-05-02T02:08:11Z",
+    "last_maintenance_date": "2026-02-25T02:48:47Z"
+  },
+  {
+    "sensor_id": "SEN0075",
+    "sector_id": "S006",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-11-01T11:08:21Z",
+    "last_maintenance_date": "2026-03-28T04:17:23Z"
+  },
+  {
+    "sensor_id": "SEN0076",
+    "sector_id": "S031",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2026-02-25T08:09:22Z",
+    "last_maintenance_date": "2026-05-07T01:34:26Z"
+  },
+  {
+    "sensor_id": "SEN0077",
+    "sector_id": "S004",
+    "sensor_type": "Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 250,
+    "installed_date": "2026-02-22T04:02:00Z",
+    "last_maintenance_date": "2026-02-09T15:37:51Z"
+  },
+  {
+    "sensor_id": "SEN0078",
+    "sector_id": "S019",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 1000,
+    "installed_date": "2026-06-28T13:20:55Z",
+    "last_maintenance_date": "2026-05-28T04:58:13Z"
+  },
+  {
+    "sensor_id": "SEN0079",
+    "sector_id": "S016",
+    "sensor_type": "Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 100,
+    "installed_date": "2026-02-16T21:52:14Z",
+    "last_maintenance_date": "2026-05-01T03:55:03Z"
+  },
+  {
+    "sensor_id": "SEN0080",
+    "sector_id": "S016",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-01-08T18:28:00Z",
+    "last_maintenance_date": "2026-03-01T07:25:41Z"
+  },
+  {
+    "sensor_id": "SEN0081",
+    "sector_id": "S042",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2025-11-16T03:12:18Z",
+    "last_maintenance_date": "2026-01-13T05:55:35Z"
+  },
+  {
+    "sensor_id": "SEN0082",
+    "sector_id": "S004",
+    "sensor_type": "Camera",
+    "operational_status": "Offline",
+    "detection_range_m": 750,
+    "installed_date": "2025-04-20T01:08:33Z",
+    "last_maintenance_date": "2026-03-09T19:17:59Z"
+  },
+  {
+    "sensor_id": "SEN0083",
+    "sector_id": "S027",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2025-09-22T02:34:27Z",
+    "last_maintenance_date": "2026-02-09T23:54:40Z"
+  },
+  {
+    "sensor_id": "SEN0084",
+    "sector_id": "S048",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2024-10-19T09:08:14Z",
+    "last_maintenance_date": "2026-01-02T18:20:23Z"
+  },
+  {
+    "sensor_id": "SEN0085",
+    "sector_id": "S044",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Active",
+    "detection_range_m": 250,
+    "installed_date": "2025-05-03T11:22:35Z",
+    "last_maintenance_date": "2026-03-20T08:28:58Z"
+  },
+  {
+    "sensor_id": "SEN0086",
+    "sector_id": "S027",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2025-06-12T17:31:05Z",
+    "last_maintenance_date": "2026-03-01T20:09:11Z"
+  },
+  {
+    "sensor_id": "SEN0087",
+    "sector_id": "S011",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2026-02-17T05:11:27Z",
+    "last_maintenance_date": "2026-02-07T04:53:22Z"
+  },
+  {
+    "sensor_id": "SEN0088",
+    "sector_id": "S014",
+    "sensor_type": "Radar",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2026-05-09T12:36:45Z",
+    "last_maintenance_date": "2026-04-01T18:38:32Z"
+  },
+  {
+    "sensor_id": "SEN0089",
+    "sector_id": "S018",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Maintenance",
+    "detection_range_m": 250,
+    "installed_date": "2026-03-12T10:20:29Z",
+    "last_maintenance_date": "2026-03-28T18:26:47Z"
+  },
+  {
+    "sensor_id": "SEN0090",
+    "sector_id": "S047",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Offline",
+    "detection_range_m": 1000,
+    "installed_date": "2024-10-02T02:31:23Z",
+    "last_maintenance_date": "2026-02-08T21:36:05Z"
+  },
+  {
+    "sensor_id": "SEN0091",
+    "sector_id": "S021",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2025-07-18T11:14:53Z",
+    "last_maintenance_date": "2026-05-25T03:32:39Z"
+  },
+  {
+    "sensor_id": "SEN0092",
+    "sector_id": "S011",
+    "sensor_type": "Motion Sensor",
+    "operational_status": "Maintenance",
+    "detection_range_m": 100,
+    "installed_date": "2026-03-28T22:41:51Z",
+    "last_maintenance_date": "2026-03-26T08:45:43Z"
+  },
+  {
+    "sensor_id": "SEN0093",
+    "sector_id": "S016",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 500,
+    "installed_date": "2024-11-26T03:09:08Z",
+    "last_maintenance_date": "2026-06-17T18:04:16Z"
+  },
+  {
+    "sensor_id": "SEN0094",
+    "sector_id": "S048",
+    "sensor_type": "Camera",
+    "operational_status": "Maintenance",
+    "detection_range_m": 500,
+    "installed_date": "2025-04-03T00:47:33Z",
+    "last_maintenance_date": "2026-01-26T07:48:47Z"
+  },
+  {
+    "sensor_id": "SEN0095",
+    "sector_id": "S018",
+    "sensor_type": "UAV Feed",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2026-03-09T12:31:21Z",
+    "last_maintenance_date": "2026-01-30T06:41:22Z"
+  },
+  {
+    "sensor_id": "SEN0096",
+    "sector_id": "S026",
+    "sensor_type": "Camera",
+    "operational_status": "Active",
+    "detection_range_m": 1000,
+    "installed_date": "2026-05-05T22:01:45Z",
+    "last_maintenance_date": "2026-05-07T17:26:48Z"
+  },
+  {
+    "sensor_id": "SEN0097",
+    "sector_id": "S026",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 750,
+    "installed_date": "2025-04-16T17:06:40Z",
+    "last_maintenance_date": "2026-02-14T00:00:32Z"
+  },
+  {
+    "sensor_id": "SEN0098",
+    "sector_id": "S044",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2025-04-10T21:45:06Z",
+    "last_maintenance_date": "2026-06-11T11:38:37Z"
+  },
+  {
+    "sensor_id": "SEN0099",
+    "sector_id": "S047",
+    "sensor_type": "Radar",
+    "operational_status": "Maintenance",
+    "detection_range_m": 750,
+    "installed_date": "2025-09-07T18:50:03Z",
+    "last_maintenance_date": "2026-04-08T16:23:25Z"
+  },
+  {
+    "sensor_id": "SEN0100",
+    "sector_id": "S038",
+    "sensor_type": "Thermal Camera",
+    "operational_status": "Active",
+    "detection_range_m": 100,
+    "installed_date": "2025-10-24T08:37:39Z",
+    "last_maintenance_date": "2026-02-16T19:49:09Z"
+  }
+]
