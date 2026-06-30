@@ -1,0 +1,272 @@
+[
+  {
+    "alert_id": "444921dd-b863-40fe-8ea3-17a97dca248b",
+    "sector_id": "S001",
+    "confidence": 0.97,
+    "alert_status": "confirmed",
+    "threat_score": 100,
+    "threat_level": "Critical",
+    "recommended_action": "emergency_response",
+    "score_breakdown": {
+      "human_detection": 55,
+      "vehicle_detection": 35,
+      "visibility": 12,
+      "weather": 8,
+      "patrol_gap": 10,
+      "historical_risk": 9
+    },
+    "reasons": [
+      "Multiple armed groups detected with fast movement toward border",
+      "Fast-moving vehicle heading toward border at high speed",
+      "Visibility is critically low due to Storm conditions",
+      "Severe weather condition (Storm) increases infiltration risk",
+      "Sector has active threat designation \u2014 historical risk score 9/10",
+      "Sector has not been patrolled for 6.0 hours \u2014 high exploitation window"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "57d7f4fd-fd7a-44a5-8d4b-979e28c03e66",
+    "sector_id": "S012",
+    "confidence": 0.91,
+    "alert_status": "confirmed",
+    "threat_score": 67,
+    "threat_level": "High",
+    "recommended_action": "dispatch_patrol",
+    "score_breakdown": {
+      "human_detection": 35,
+      "vehicle_detection": 0,
+      "visibility": 12,
+      "weather": 7,
+      "patrol_gap": 6,
+      "historical_risk": 7
+    },
+    "reasons": [
+      "Single individual detected moving directly toward restricted zone",
+      "Visibility is critically low due to Fog conditions",
+      "Severe weather condition (Fog) increases infiltration risk",
+      "Sector has moderate incident history \u2014 historical risk score 7/10",
+      "Last patrol was 3.5 hours ago \u2014 moderate gap"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "920e4b18-5b83-4167-acdb-3ec9f04f7017",
+    "sector_id": "S023",
+    "confidence": 0.88,
+    "alert_status": "unverified",
+    "threat_score": 28,
+    "threat_level": "Safe",
+    "recommended_action": "continue_monitoring",
+    "score_breakdown": {
+      "human_detection": 0,
+      "vehicle_detection": 20,
+      "visibility": 0,
+      "weather": 0,
+      "patrol_gap": 3,
+      "historical_risk": 5
+    },
+    "reasons": [
+      "Slow-moving vehicle detected near restricted area",
+      "Sector has moderate incident history \u2014 historical risk score 5/10",
+      "Last patrol was 2.0 hours ago \u2014 within acceptable range"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "4660fff1-2f57-4bde-a081-a783f71a70e6",
+    "sector_id": "S034",
+    "confidence": 0.95,
+    "alert_status": "confirmed",
+    "threat_score": 1,
+    "threat_level": "Safe",
+    "recommended_action": "continue_monitoring",
+    "score_breakdown": {
+      "human_detection": 0,
+      "vehicle_detection": 0,
+      "visibility": 0,
+      "weather": 0,
+      "patrol_gap": 0,
+      "historical_risk": 1
+    },
+    "reasons": [
+      "Sector has low but non-zero incident history \u2014 score 1/10"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "00c49d4a-720d-4d37-9b8a-aafea7fefaa1",
+    "sector_id": "S007",
+    "status": "discarded",
+    "reason": "Confidence 0.42 below threshold (0.50) \u2014 likely false positive",
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "9c79babd-3b34-44d7-8aab-6671c47f11ea",
+    "sector_id": "S041",
+    "confidence": 0.93,
+    "alert_status": "confirmed",
+    "threat_score": 92,
+    "threat_level": "Critical",
+    "recommended_action": "emergency_response",
+    "score_breakdown": {
+      "human_detection": 45,
+      "vehicle_detection": 10,
+      "visibility": 12,
+      "weather": 7,
+      "patrol_gap": 10,
+      "historical_risk": 8
+    },
+    "reasons": [
+      "Group of 2\u20134 individuals detected with directional movement",
+      "Unidentified vehicle parked near border zone",
+      "Visibility is critically low due to Dust Storm conditions",
+      "Severe weather condition (Dust Storm) increases infiltration risk",
+      "Sector has active threat designation \u2014 historical risk score 8/10",
+      "Sector has not been patrolled for 5.0 hours \u2014 high exploitation window"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "1ac54a11-5a99-4e72-b38a-dfb7658985f1",
+    "sector_id": "S018",
+    "confidence": 0.79,
+    "alert_status": "unverified",
+    "threat_score": 34,
+    "threat_level": "Medium",
+    "recommended_action": "notify_operator",
+    "score_breakdown": {
+      "human_detection": 0,
+      "vehicle_detection": 10,
+      "visibility": 5,
+      "weather": 0,
+      "patrol_gap": 10,
+      "historical_risk": 9
+    },
+    "reasons": [
+      "Unidentified vehicle parked near border zone",
+      "Visibility is reduced \u2014 detection reliability may be affected",
+      "Sector has active threat designation \u2014 historical risk score 9/10",
+      "Sector has not been patrolled for 4.5 hours \u2014 high exploitation window"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "ff45e1cd-a9c6-4009-b037-6572287fff73",
+    "sector_id": "S029",
+    "confidence": 0.9,
+    "alert_status": "confirmed",
+    "threat_score": 42,
+    "threat_level": "Medium",
+    "recommended_action": "notify_operator",
+    "score_breakdown": {
+      "human_detection": 20,
+      "vehicle_detection": 0,
+      "visibility": 5,
+      "weather": 3,
+      "patrol_gap": 10,
+      "historical_risk": 4
+    },
+    "reasons": [
+      "Single individual detected with slow movement near border",
+      "Visibility is reduced \u2014 detection reliability may be affected",
+      "Adverse weather (Rain) may reduce sensor effectiveness",
+      "Sector has low but non-zero incident history \u2014 score 4/10",
+      "Sector has not been patrolled for 5.0 hours \u2014 high exploitation window"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "29c0e14e-fde3-4abe-b30a-02923ec79fdc",
+    "sector_id": "S005",
+    "confidence": 0.96,
+    "alert_status": "confirmed",
+    "threat_score": 47,
+    "threat_level": "Medium",
+    "recommended_action": "notify_operator",
+    "score_breakdown": {
+      "human_detection": 0,
+      "vehicle_detection": 35,
+      "visibility": 0,
+      "weather": 0,
+      "patrol_gap": 6,
+      "historical_risk": 6
+    },
+    "reasons": [
+      "Fast-moving vehicle heading toward border at high speed",
+      "Sector has moderate incident history \u2014 historical risk score 6/10",
+      "Last patrol was 3.0 hours ago \u2014 moderate gap"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "e5925c16-8c00-41c5-b366-15c701b01a5a",
+    "sector_id": "S038",
+    "confidence": 0.85,
+    "alert_status": "unverified",
+    "threat_score": 47,
+    "threat_level": "Medium",
+    "recommended_action": "notify_operator",
+    "score_breakdown": {
+      "human_detection": 20,
+      "vehicle_detection": 0,
+      "visibility": 12,
+      "weather": 4,
+      "patrol_gap": 6,
+      "historical_risk": 5
+    },
+    "reasons": [
+      "Single individual detected with slow movement near border",
+      "Visibility is critically low due to Snow conditions",
+      "Adverse weather (Snow) may reduce sensor effectiveness",
+      "Sector has moderate incident history \u2014 historical risk score 5/10",
+      "Last patrol was 2.5 hours ago \u2014 moderate gap"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "c9cf7c35-3f46-4f04-b901-913fd71b7ed2",
+    "sector_id": "S002",
+    "confidence": 0.99,
+    "alert_status": "confirmed",
+    "threat_score": 65,
+    "threat_level": "High",
+    "recommended_action": "dispatch_patrol",
+    "score_breakdown": {
+      "human_detection": 55,
+      "vehicle_detection": 0,
+      "visibility": 0,
+      "weather": 0,
+      "patrol_gap": 0,
+      "historical_risk": 10
+    },
+    "reasons": [
+      "Multiple armed groups detected with fast movement toward border",
+      "Sector has active threat designation \u2014 historical risk score 10/10"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  },
+  {
+    "alert_id": "755d85b7-35b6-43e0-8c61-dd478d96e766",
+    "sector_id": "S015",
+    "confidence": 0.77,
+    "alert_status": "unverified",
+    "threat_score": 43,
+    "threat_level": "Medium",
+    "recommended_action": "notify_operator",
+    "score_breakdown": {
+      "human_detection": 35,
+      "vehicle_detection": 0,
+      "visibility": 5,
+      "weather": 0,
+      "patrol_gap": 0,
+      "historical_risk": 3
+    },
+    "reasons": [
+      "Single individual detected moving directly toward restricted zone",
+      "Visibility is reduced \u2014 detection reliability may be affected",
+      "Sector has low but non-zero incident history \u2014 score 3/10"
+    ],
+    "timestamp": "2026-06-30T22:57:33Z"
+  }
+]
