@@ -77,8 +77,20 @@
   vertical-align: middle;
 }
 
+.row {
+  cursor: pointer;
+}
+
 .row:hover td {
   background: rgba(33, 150, 243, 0.04);
+}
+
+.row:focus-visible {
+  outline: none;
+}
+
+.row:focus-visible td:first-child {
+  box-shadow: inset 3px 0 0 var(--color-blue-300);
 }
 
 .row:last-child td {

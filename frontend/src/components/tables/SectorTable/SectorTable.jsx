@@ -37,7 +37,7 @@ function ThreatBar({ score }) {
   );
 }
 
-export default function SectorTable({ sectors, loading, error, onRetry }) {
+export default function SectorTable({ sectors, loading, error, onRetry, onSectorClick }) {
   return (
     <div className={styles.panel}>
       <div className={styles.panelHeader}>
@@ -85,6 +85,15 @@ export default function SectorTable({ sectors, loading, error, onRetry }) {
                     initial={{ opacity: 0, x: -6 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.04, duration: 0.25 }}
+                    onClick={() => onSectorClick?.(s)}
+                    role={onSectorClick ? 'button' : undefined}
+                    tabIndex={onSectorClick ? 0 : undefined}
+                    onKeyDown={(e) => {
+                      if (onSectorClick && (e.key === 'Enter' || e.key === ' ')) {
+                        e.preventDefault();
+                        onSectorClick(s);
+                      }
+                    }}
                   >
                     <td>
                       <span className={styles.sectorId}>{s.id}</span>
