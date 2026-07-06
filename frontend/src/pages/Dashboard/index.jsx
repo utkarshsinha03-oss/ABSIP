@@ -1,17 +1,28 @@
-import { useMemo } from 'react';
-import { Layers, Bell, ShieldAlert, Activity } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Siren, Bell, ShieldAlert, Activity } from 'lucide-react';
 import { useSectors } from '../../hooks/useSectors';
 import { useAlerts } from '../../hooks/useAlerts';
+import { useBackendStatus } from '../../hooks/useBackendStatus';
 import StatCard from '../../components/cards/StatCard/StatCard';
 import SectorTable from '../../components/tables/SectorTable/SectorTable';
 import AlertsPanel from '../../components/alerts/AlertsPanel/AlertsPanel';
+import AlertDetailsDrawer from "../../components/alerts/AlertDetailsDrawer";
+import SectorDetailsDrawer from "../../components/tables/SectorDetailsDrawer";
 import ThreatDistributionChart from '../../components/charts/ThreatDistributionChart/ThreatDistributionChart';
-import { capitalize } from '../../utils/helpers';
 import styles from './Dashboard.module.css';
+
+const MISSION_STATUS = {
+  critical: { label: 'Critical Alert', accent: 'critical' },
+  high:     { label: 'Heightened',     accent: 'gold' },
+  medium:   { label: 'Elevated',       accent: 'gold' },
+  low:      { label: 'Nominal',        accent: 'low' },
+};
+const MISSION_STATUS_DEFAULT = { label: 'Standby', accent: 'low' };
 
 export default function DashboardPage() {
   const { sectors, loading: sLoad, error: sErr, refetch: refetchSectors } = useSectors();
   const { alerts,  loading: aLoad, error: aErr, refetch: refetchAlerts  } = useAlerts();
+  const backendStatus = useBackendStatus();
 
   const highestThreat = useMemo(() => {
     const order = ['critical', 'high', 'medium', 'low'];
@@ -21,12 +32,49 @@ export default function DashboardPage() {
     return 'low';
   }, [sectors]);
 
+  const highestThreatSector = useMemo(() => {
+    if (!sectors.length || !highestThreat) return null;
+    return sectors.find((s) => s.threat_level?.toLowerCase() === highestThreat) ?? null;
+  }, [sectors, highestThreat]);
+
   const criticalCount = useMemo(
     () => alerts.filter((a) => a.threat_level?.toLowerCase() === 'critical').length,
     [alerts]
   );
 
+  const missionStatus = MISSION_STATUS[highestThreat] ?? MISSION_STATUS_DEFAULT;
+
+  const isOnline = backendStatus === 'online';
+  const isChecking = backendStatus === 'checking';
+  const systemStatusLabel = isChecking ? 'Checking' : isOnline ? 'Nominal' : 'Degraded';
+  const systemStatusSub = isChecking
+    ? 'LINKING UPLINK…'
+    : isOnline ? 'ALL SERVICES ONLINE' : 'BACKEND OFFLINE';
+  const systemStatusAccent = isChecking ? 'gold' : isOnline ? 'low' : 'critical';
+
   const backendOffline = sErr === 'backend_offline' || aErr === 'backend_offline';
+
+  // ── Alert details drawer ────────────────────────────────────
+  const [selectedAlert, setSelectedAlert] = useState(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleAlertClick = (alert) => {
+    setSelectedAlert(alert);
+    setDrawerOpen(true);
+  };
+
+  const closeDrawer = () => setDrawerOpen(false);
+
+  // ── Sector details drawer ───────────────────────────────────
+  const [selectedSector, setSelectedSector] = useState(null);
+  const [sectorDrawerOpen, setSectorDrawerOpen] = useState(false);
+
+  const handleSectorClick = (sector) => {
+    setSelectedSector(sector);
+    setSectorDrawerOpen(true);
+  };
+
+  const closeSectorDrawer = () => setSectorDrawerOpen(false);
 
   return (
     <div className={styles.page}>
@@ -37,66 +85,89 @@ export default function DashboardPage() {
         </div>
       )}
 
-      {/* Stat cards */}
+      {/* KPI cards */}
       <div className={styles.statsGrid}>
-        <StatCard
-          icon={Layers}
-          label="Total Sectors"
-          value={sLoad ? null : sectors.length}
-          sub="REGISTERED ZONES"
-          accent="blue"
-          loading={sLoad}
-        />
-        <StatCard
-          icon={Bell}
-          label="Active Alerts"
-          value={aLoad ? null : alerts.length}
-          sub={`${criticalCount} CRITICAL`}
-          accent={criticalCount > 0 ? 'critical' : 'gold'}
+        <div className={styles.statCardWrap}>
+          <StatCard
+            icon={Siren}
+            label="Critical Alerts"
+            value={aLoad ? null : criticalCount}
+            sub="REQUIRE IMMEDIATE ACTION"
+            accent={criticalCount > 0 ? 'critical' : 'low'}
+            loading={aLoad}
+          />
+        </div>
+        <div className={styles.statCardWrap}>
+          <StatCard
+            icon={Bell}
+            label="Active Alerts"
+            value={aLoad ? null : alerts.length}
+            sub="TOTAL IN QUEUE"
+            accent={alerts.length > 0 ? 'gold' : 'low'}
+            loading={aLoad}
+          />
+        </div>
+        <div className={styles.statCardWrap}>
+          <StatCard
+            icon={ShieldAlert}
+            label="Mission Status"
+            value={sLoad ? null : missionStatus.label}
+            sub={
+              highestThreatSector
+                ? `SECTOR ${highestThreatSector.sector_id ?? highestThreatSector.name ?? '—'}`
+                : 'CURRENT ASSESSMENT'
+            }
+            accent={missionStatus.accent}
+            loading={sLoad}
+          />
+        </div>
+        <div className={styles.statCardWrap}>
+          <StatCard
+            icon={Activity}
+            label="System Status"
+            value={systemStatusLabel}
+            sub={systemStatusSub}
+            accent={systemStatusAccent}
+            loading={false}
+          />
+        </div>
+      </div>
+
+      {/* Primary — Alerts is the visual anchor of the dashboard */}
+      <div className={styles.alertsPrimary}>
+        <AlertsPanel
+          alerts={alerts}
           loading={aLoad}
-        />
-        <StatCard
-          icon={ShieldAlert}
-          label="Highest Threat"
-          value={sLoad ? null : (highestThreat ? capitalize(highestThreat) : 'None')}
-          sub="CURRENT ASSESSMENT"
-          accent={highestThreat === 'critical' ? 'critical' : highestThreat === 'low' ? 'low' : 'gold'}
-          loading={sLoad}
-        />
-        <StatCard
-          icon={Activity}
-          label="System Status"
-          value={backendOffline ? 'Degraded' : 'Nominal'}
-          sub={backendOffline ? 'BACKEND OFFLINE' : 'ALL SERVICES ONLINE'}
-          accent={backendOffline ? 'critical' : 'low'}
-          loading={false}
+          error={aErr !== 'backend_offline' ? aErr : null}
+          onRetry={refetchAlerts}
+          onAlertClick={handleAlertClick}
         />
       </div>
 
-      {/* Main content */}
-      <div className={styles.mainGrid}>
+      {/* Secondary — sector detail, deliberately smaller than Alerts */}
+      <div className={styles.secondaryGrid}>
         <div className={styles.tableCol}>
+          <div className={styles.secondaryHead}>
+            <span className={styles.secondaryTitle}>Sector Overview</span>
+          </div>
           <SectorTable
             sectors={sectors}
             loading={sLoad}
             error={sErr !== 'backend_offline' ? sErr : null}
             onRetry={refetchSectors}
+            onSectorClick={handleSectorClick}
           />
         </div>
-        <div className={styles.alertsCol}>
-          <div className={styles.alertsPanelWrap}>
-            <AlertsPanel
-              alerts={alerts}
-              loading={aLoad}
-              error={aErr !== 'backend_offline' ? aErr : null}
-              onRetry={refetchAlerts}
-            />
+        <div className={styles.chartCol}>
+          <div className={styles.secondaryHead}>
+            <span className={styles.secondaryTitle}>Threat Distribution</span>
           </div>
-          <div className={styles.chartWrap}>
-            <ThreatDistributionChart sectors={sectors} loading={sLoad} />
-          </div>
+          <ThreatDistributionChart sectors={sectors} loading={sLoad} />
         </div>
       </div>
+
+      <AlertDetailsDrawer alert={selectedAlert} open={drawerOpen} onClose={closeDrawer} />
+      <SectorDetailsDrawer sector={selectedSector} open={sectorDrawerOpen} onClose={closeSectorDrawer} />
     </div>
   );
 }

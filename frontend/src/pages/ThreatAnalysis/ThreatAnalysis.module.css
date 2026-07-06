@@ -1,7 +1,24 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
+}
+
+.offlineBanner {
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.08);
+  color: var(--color-critical);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+}
+
+.pageHead {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .title {
@@ -18,4 +35,306 @@
   font-size: var(--text-sm);
   color: var(--text-muted);
   letter-spacing: 0.06em;
+}
+
+/* ── Threat Score Overview ───────────────────────────────────── */
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.statCardWrap {
+  min-width: 0;
+}
+
+/* ── Main two-column layout ──────────────────────────────────── */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-width: 0;
+}
+
+/* ── Shared panel scaffolding (matches SectorTable .panel) ──── */
+.panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: blur(12px);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-blue-300);
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.panelBody {
+  padding: var(--space-5);
+}
+
+.skeletonStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* ── Threat Factor Breakdown ─────────────────────────────────── */
+.factorList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.factorRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.factorHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.factorLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.factorValue {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-primary);
+}
+
+.factorTrack {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.factorFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 3px;
+}
+
+/* ── Highest Risk Sectors ────────────────────────────────────── */
+.sectorList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sectorRow {
+  display: grid;
+  grid-template-columns: 28px auto 1fr auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sectorRow:last-child {
+  border-bottom: none;
+}
+
+.sectorRank {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.sectorRowId {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-blue-300);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.sectorRowBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.sectorRowTrack {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sectorRowFill {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.sectorRowScore {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  min-width: 22px;
+  text-align: right;
+}
+
+/* ── Recommended Actions Summary ─────────────────────────────── */
+.actionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.actionCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  overflow: hidden;
+}
+
+.actionCard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.actionAccent_critical { border-color: rgba(239, 68, 68, 0.3); }
+.actionAccent_critical::before { background: var(--color-critical); box-shadow: 0 0 12px var(--color-critical); }
+
+.actionAccent_gold { border-color: rgba(245, 166, 35, 0.3); }
+.actionAccent_gold::before { background: var(--color-gold-500); box-shadow: 0 0 12px rgba(245, 166, 35, 0.6); }
+
+.actionAccent_blue { border-color: rgba(33, 150, 243, 0.3); }
+.actionAccent_blue::before { background: var(--color-blue-500); box-shadow: 0 0 12px rgba(33, 150, 243, 0.5); }
+
+.actionAccent_low { border-color: rgba(34, 197, 94, 0.3); }
+.actionAccent_low::before { background: var(--color-low); box-shadow: 0 0 12px var(--color-low); }
+
+.actionCount {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.actionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── AI Insights ──────────────────────────────────────────────── */
+.insightList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.insightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.insightIcon {
+  color: var(--color-gold-300);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .overviewGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .actionGrid {
+    grid-template-columns: 1fr;
+  }
+  .sectorRow {
+    grid-template-columns: 24px 1fr;
+    row-gap: var(--space-2);
+  }
+  .sectorRowBar {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
 }
