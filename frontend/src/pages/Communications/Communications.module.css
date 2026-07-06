@@ -91,6 +91,7 @@
   padding: var(--space-4);
   border: 1px solid var(--border-primary, #333);
   background: var(--bg-panel, rgba(255,255,255,0.02));
+  border-radius: var(--radius-md, 6px);
 }
 
 .cardLabel {
@@ -111,6 +112,8 @@
 .tableWrap {
   overflow-x: auto;
   border: 1px solid var(--border-primary, #333);
+  background: var(--surface-1, rgba(255,255,255,0.03));
+border-radius: var(--radius-md, 6px);
 }
 
 .table {
@@ -181,7 +184,7 @@
 .insightsTitle {
   font-family: var(--font-display);
   font-size: var(--text-lg);
-  letter-spacing: 0.08em);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-primary);
   margin-bottom: var(--space-4);
