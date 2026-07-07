@@ -1,0 +1,141 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  height: 100%;
+}
+
+.offlineBanner {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-critical);
+  letter-spacing: 0.06em;
+}
+
+/* ── KPI cards ─────────────────────────────────────────────────── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+/* Wrapper adds the premium hover lift without touching StatCard
+   itself — subtle glow + rise, consistent with the landing page's
+   card interactions. */
+.statCardWrap {
+  border-radius: var(--radius-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.statCardWrap:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -18px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Alerts — the primary focus of the dashboard ─────────────────
+   Full width, generous height, glass panel treatment so it visually
+   dominates everything beneath it. */
+.alertsPrimary {
+  position: relative;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow: 0 24px 48px -30px rgba(0, 0, 0, 0.6);
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Secondary — sector table + threat chart ─────────────────────
+   Deliberately quieter than Alerts: smaller label treatment, no
+   elevated glow, kept below the fold visually and in the DOM. */
+.secondaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--space-5);
+}
+
+.tableCol,
+.chartCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 0;
+}
+
+.tableCol {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.015);
+  padding: var(--space-4);
+  overflow: auto;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.tableCol:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.chartCol {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.015);
+  padding: var(--space-4);
+  min-height: 300px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.chartCol:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.secondaryHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.secondaryTitle {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .secondaryGrid {
+    grid-template-columns: 1fr;
+  }
+  .alertsPrimary {
+    min-height: 380px;
+  }
+  .chartCol {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  .alertsPrimary {
+    min-height: 320px;
+  }
+}
