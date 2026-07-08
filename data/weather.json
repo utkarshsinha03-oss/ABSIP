@@ -1,0 +1,502 @@
+[
+  {
+    "weather_id": "W001",
+    "sector_id": "S001",
+    "weather_condition": "Clear",
+    "visibility_level": "High",
+    "temperature_celsius": 32.5,
+    "wind_speed_kmh": 6.6,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T05:46:20Z"
+  },
+  {
+    "weather_id": "W002",
+    "sector_id": "S002",
+    "weather_condition": "Clear",
+    "visibility_level": "High",
+    "temperature_celsius": 21.3,
+    "wind_speed_kmh": 14.0,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T07:52:37Z"
+  },
+  {
+    "weather_id": "W003",
+    "sector_id": "S003",
+    "weather_condition": "Rain",
+    "visibility_level": "Low",
+    "temperature_celsius": 17.0,
+    "wind_speed_kmh": 29.2,
+    "rainfall_mm": 23.1,
+    "recorded_at": "2026-06-30T09:09:16Z"
+  },
+  {
+    "weather_id": "W004",
+    "sector_id": "S004",
+    "weather_condition": "Clear",
+    "visibility_level": "High",
+    "temperature_celsius": 17.8,
+    "wind_speed_kmh": 13.6,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T03:42:41Z"
+  },
+  {
+    "weather_id": "W005",
+    "sector_id": "S005",
+    "weather_condition": "Clear",
+    "visibility_level": "Medium",
+    "temperature_celsius": 17.5,
+    "wind_speed_kmh": 8.1,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T20:26:10Z"
+  },
+  {
+    "weather_id": "W006",
+    "sector_id": "S006",
+    "weather_condition": "Clear",
+    "visibility_level": "High",
+    "temperature_celsius": 22.9,
+    "wind_speed_kmh": 6.0,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T07:23:16Z"
+  },
+  {
+    "weather_id": "W007",
+    "sector_id": "S007",
+    "weather_condition": "Rain",
+    "visibility_level": "Medium",
+    "temperature_celsius": 23.1,
+    "wind_speed_kmh": 19.2,
+    "rainfall_mm": 2.7,
+    "recorded_at": "2026-06-30T13:21:23Z"
+  },
+  {
+    "weather_id": "W008",
+    "sector_id": "S008",
+    "weather_condition": "Snow",
+    "visibility_level": "Low",
+    "temperature_celsius": -8.4,
+    "wind_speed_kmh": 16.9,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T03:44:20Z"
+  },
+  {
+    "weather_id": "W009",
+    "sector_id": "S009",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Medium",
+    "temperature_celsius": 31.6,
+    "wind_speed_kmh": 22.4,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T00:01:31Z"
+  },
+  {
+    "weather_id": "W010",
+    "sector_id": "S010",
+    "weather_condition": "Snow",
+    "visibility_level": "Medium",
+    "temperature_celsius": -7.8,
+    "wind_speed_kmh": 19.8,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T18:00:07Z"
+  },
+  {
+    "weather_id": "W011",
+    "sector_id": "S011",
+    "weather_condition": "Fog",
+    "visibility_level": "Low",
+    "temperature_celsius": 15.1,
+    "wind_speed_kmh": 8.5,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T01:55:18Z"
+  },
+  {
+    "weather_id": "W012",
+    "sector_id": "S012",
+    "weather_condition": "Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 17.9,
+    "wind_speed_kmh": 30.3,
+    "rainfall_mm": 24.2,
+    "recorded_at": "2026-06-30T19:11:04Z"
+  },
+  {
+    "weather_id": "W013",
+    "sector_id": "S013",
+    "weather_condition": "Clear",
+    "visibility_level": "High",
+    "temperature_celsius": 18.1,
+    "wind_speed_kmh": 13.2,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T15:01:58Z"
+  },
+  {
+    "weather_id": "W014",
+    "sector_id": "S014",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 34.5,
+    "wind_speed_kmh": 53.3,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T10:11:05Z"
+  },
+  {
+    "weather_id": "W015",
+    "sector_id": "S015",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 27.4,
+    "wind_speed_kmh": 36.2,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T14:21:10Z"
+  },
+  {
+    "weather_id": "W016",
+    "sector_id": "S016",
+    "weather_condition": "Rain",
+    "visibility_level": "Medium",
+    "temperature_celsius": 18.2,
+    "wind_speed_kmh": 26.4,
+    "rainfall_mm": 34.1,
+    "recorded_at": "2026-06-30T09:05:24Z"
+  },
+  {
+    "weather_id": "W017",
+    "sector_id": "S017",
+    "weather_condition": "Rain",
+    "visibility_level": "Low",
+    "temperature_celsius": 10.3,
+    "wind_speed_kmh": 12.8,
+    "rainfall_mm": 37.2,
+    "recorded_at": "2026-06-30T16:42:17Z"
+  },
+  {
+    "weather_id": "W018",
+    "sector_id": "S018",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Medium",
+    "temperature_celsius": 39.0,
+    "wind_speed_kmh": 28.0,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T12:56:22Z"
+  },
+  {
+    "weather_id": "W019",
+    "sector_id": "S019",
+    "weather_condition": "Storm",
+    "visibility_level": "Medium",
+    "temperature_celsius": 6.3,
+    "wind_speed_kmh": 59.4,
+    "rainfall_mm": 18.4,
+    "recorded_at": "2026-06-29T09:50:20Z"
+  },
+  {
+    "weather_id": "W020",
+    "sector_id": "S020",
+    "weather_condition": "Fog",
+    "visibility_level": "Low",
+    "temperature_celsius": 17.0,
+    "wind_speed_kmh": 4.6,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T18:13:46Z"
+  },
+  {
+    "weather_id": "W021",
+    "sector_id": "S021",
+    "weather_condition": "Clear",
+    "visibility_level": "Medium",
+    "temperature_celsius": 24.1,
+    "wind_speed_kmh": 8.5,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T03:56:02Z"
+  },
+  {
+    "weather_id": "W022",
+    "sector_id": "S022",
+    "weather_condition": "Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 13.4,
+    "wind_speed_kmh": 74.7,
+    "rainfall_mm": 31.0,
+    "recorded_at": "2026-06-30T11:06:35Z"
+  },
+  {
+    "weather_id": "W023",
+    "sector_id": "S023",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 42.6,
+    "wind_speed_kmh": 38.3,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T16:52:32Z"
+  },
+  {
+    "weather_id": "W024",
+    "sector_id": "S024",
+    "weather_condition": "Snow",
+    "visibility_level": "Medium",
+    "temperature_celsius": 2.8,
+    "wind_speed_kmh": 15.1,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-28T23:41:40Z"
+  },
+  {
+    "weather_id": "W025",
+    "sector_id": "S025",
+    "weather_condition": "Snow",
+    "visibility_level": "Medium",
+    "temperature_celsius": -2.3,
+    "wind_speed_kmh": 8.5,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T10:33:18Z"
+  },
+  {
+    "weather_id": "W026",
+    "sector_id": "S026",
+    "weather_condition": "Fog",
+    "visibility_level": "Medium",
+    "temperature_celsius": 13.4,
+    "wind_speed_kmh": 4.6,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T13:24:16Z"
+  },
+  {
+    "weather_id": "W027",
+    "sector_id": "S027",
+    "weather_condition": "Rain",
+    "visibility_level": "High",
+    "temperature_celsius": 19.9,
+    "wind_speed_kmh": 28.5,
+    "rainfall_mm": 3.4,
+    "recorded_at": "2026-06-29T09:44:26Z"
+  },
+  {
+    "weather_id": "W028",
+    "sector_id": "S028",
+    "weather_condition": "Snow",
+    "visibility_level": "Medium",
+    "temperature_celsius": -0.1,
+    "wind_speed_kmh": 16.5,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T17:30:44Z"
+  },
+  {
+    "weather_id": "W029",
+    "sector_id": "S029",
+    "weather_condition": "Fog",
+    "visibility_level": "Low",
+    "temperature_celsius": 13.8,
+    "wind_speed_kmh": 5.8,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T20:13:03Z"
+  },
+  {
+    "weather_id": "W030",
+    "sector_id": "S030",
+    "weather_condition": "Fog",
+    "visibility_level": "Low",
+    "temperature_celsius": 17.8,
+    "wind_speed_kmh": 1.6,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T01:08:33Z"
+  },
+  {
+    "weather_id": "W031",
+    "sector_id": "S031",
+    "weather_condition": "Fog",
+    "visibility_level": "Low",
+    "temperature_celsius": 19.0,
+    "wind_speed_kmh": 4.8,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T22:24:49Z"
+  },
+  {
+    "weather_id": "W032",
+    "sector_id": "S032",
+    "weather_condition": "Clear",
+    "visibility_level": "High",
+    "temperature_celsius": 17.1,
+    "wind_speed_kmh": 13.2,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T08:16:00Z"
+  },
+  {
+    "weather_id": "W033",
+    "sector_id": "S033",
+    "weather_condition": "Snow",
+    "visibility_level": "Medium",
+    "temperature_celsius": -9.1,
+    "wind_speed_kmh": 10.0,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T23:10:36Z"
+  },
+  {
+    "weather_id": "W034",
+    "sector_id": "S034",
+    "weather_condition": "Fog",
+    "visibility_level": "Low",
+    "temperature_celsius": 16.5,
+    "wind_speed_kmh": 6.1,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T16:54:58Z"
+  },
+  {
+    "weather_id": "W035",
+    "sector_id": "S035",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Medium",
+    "temperature_celsius": 39.0,
+    "wind_speed_kmh": 35.1,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T15:58:33Z"
+  },
+  {
+    "weather_id": "W036",
+    "sector_id": "S036",
+    "weather_condition": "Clear",
+    "visibility_level": "Low",
+    "temperature_celsius": 23.8,
+    "wind_speed_kmh": 4.3,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T23:04:37Z"
+  },
+  {
+    "weather_id": "W037",
+    "sector_id": "S037",
+    "weather_condition": "Snow",
+    "visibility_level": "Low",
+    "temperature_celsius": 2.2,
+    "wind_speed_kmh": 21.2,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T19:38:03Z"
+  },
+  {
+    "weather_id": "W038",
+    "sector_id": "S038",
+    "weather_condition": "Snow",
+    "visibility_level": "Medium",
+    "temperature_celsius": -0.6,
+    "wind_speed_kmh": 18.4,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T20:23:56Z"
+  },
+  {
+    "weather_id": "W039",
+    "sector_id": "S039",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 42.9,
+    "wind_speed_kmh": 34.4,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T03:40:09Z"
+  },
+  {
+    "weather_id": "W040",
+    "sector_id": "S040",
+    "weather_condition": "Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 5.9,
+    "wind_speed_kmh": 39.3,
+    "rainfall_mm": 36.5,
+    "recorded_at": "2026-06-29T15:21:51Z"
+  },
+  {
+    "weather_id": "W041",
+    "sector_id": "S041",
+    "weather_condition": "Rain",
+    "visibility_level": "Medium",
+    "temperature_celsius": 18.6,
+    "wind_speed_kmh": 19.5,
+    "rainfall_mm": 17.6,
+    "recorded_at": "2026-06-30T19:46:37Z"
+  },
+  {
+    "weather_id": "W042",
+    "sector_id": "S042",
+    "weather_condition": "Fog",
+    "visibility_level": "Low",
+    "temperature_celsius": 14.4,
+    "wind_speed_kmh": 8.7,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T17:24:31Z"
+  },
+  {
+    "weather_id": "W043",
+    "sector_id": "S043",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Medium",
+    "temperature_celsius": 31.0,
+    "wind_speed_kmh": 24.7,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T20:36:30Z"
+  },
+  {
+    "weather_id": "W044",
+    "sector_id": "S044",
+    "weather_condition": "Clear",
+    "visibility_level": "High",
+    "temperature_celsius": 21.6,
+    "wind_speed_kmh": 3.4,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T13:50:19Z"
+  },
+  {
+    "weather_id": "W045",
+    "sector_id": "S045",
+    "weather_condition": "Fog",
+    "visibility_level": "Low",
+    "temperature_celsius": 10.4,
+    "wind_speed_kmh": 8.7,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T13:10:30Z"
+  },
+  {
+    "weather_id": "W046",
+    "sector_id": "S046",
+    "weather_condition": "Rain",
+    "visibility_level": "Medium",
+    "temperature_celsius": 18.6,
+    "wind_speed_kmh": 27.1,
+    "rainfall_mm": 46.6,
+    "recorded_at": "2026-06-29T09:36:01Z"
+  },
+  {
+    "weather_id": "W047",
+    "sector_id": "S047",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 35.9,
+    "wind_speed_kmh": 55.7,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T13:34:03Z"
+  },
+  {
+    "weather_id": "W048",
+    "sector_id": "S048",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Medium",
+    "temperature_celsius": 25.6,
+    "wind_speed_kmh": 36.9,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T11:18:16Z"
+  },
+  {
+    "weather_id": "W049",
+    "sector_id": "S049",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Medium",
+    "temperature_celsius": 26.2,
+    "wind_speed_kmh": 28.2,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-29T00:16:08Z"
+  },
+  {
+    "weather_id": "W050",
+    "sector_id": "S050",
+    "weather_condition": "Dust Storm",
+    "visibility_level": "Low",
+    "temperature_celsius": 26.2,
+    "wind_speed_kmh": 39.7,
+    "rainfall_mm": 0.0,
+    "recorded_at": "2026-06-30T11:10:38Z"
+  }
+]

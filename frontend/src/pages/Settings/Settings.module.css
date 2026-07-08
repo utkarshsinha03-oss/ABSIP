@@ -1,0 +1,212 @@
+/* Settings.module.css */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.saveBtn,
+.resetBtn {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm, 4px);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.saveBtn {
+  color: var(--bg-primary, #000);
+  background: var(--accent, #3a3);
+  border: 1px solid var(--accent, #3a3);
+  border-radius: var(--radius-sm, 4px);
+}
+
+.saveBtn:hover {
+  opacity: 0.85;
+}
+
+.resetBtn {
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-primary, #333);
+}
+
+.resetBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.savedBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  color: var(--success, #3a3);
+  border: 1px solid var(--success, #3a3);
+  background: rgba(51, 170, 51, 0.08);
+  padding: 0.6rem 1rem;
+  width: fit-content;
+}
+
+.savedDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success, #3a3);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-primary, #333);
+  padding-bottom: 0.5rem;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-primary, #333);
+  background: var(--bg-panel, rgba(255, 255, 255, 0.02));
+  border-radius: var(--radius-md, 6px);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-secondary, #222);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.rowLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.readonlyValue {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.select {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  background: var(--bg-primary, #000);
+  border: 1px solid var(--border-primary, #333);
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+.toggle {
+  position: relative;
+  width: 44px;
+  height: 22px;
+  border: 1px solid var(--border-primary, #333);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.2s ease;
+}
+
+.toggleOn {
+  border-color: var(--accent, #3a3);
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--text-muted);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.toggleOn .toggleThumb {
+  transform: translateX(22px);
+  background: var(--accent, #3a3);
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid currentColor;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.statusOnline {
+  color: var(--success, #3a3);
+}
+
+.statusOffline {
+  color: var(--danger, #e33);
+}
+
+.statusChecking {
+  color: var(--warning, #e9a13a);
+}

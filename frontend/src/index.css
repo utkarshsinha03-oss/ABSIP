@@ -1,0 +1,184 @@
+/* ============================================================
+   RAKSHAK – Design System
+   Border Surveillance Intelligence Platform
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+/* ── Color Tokens ─────────────────────────────────────────── */
+:root {
+  /* Base surfaces */
+  --color-void:       #020b18;
+  --color-base:       #040e1d;
+  --color-surface-1:  #071526;
+  --color-surface-2:  #0a1d35;
+  --color-surface-3:  #0f2444;
+
+  /* Glass */
+  --glass-bg:         rgba(7, 21, 38, 0.72);
+  --glass-border:     rgba(41, 128, 185, 0.18);
+  --glass-highlight:  rgba(100, 180, 255, 0.06);
+
+  /* Blue accent family */
+  --color-blue-100:   #e0f2ff;
+  --color-blue-300:   #7ec8f8;
+  --color-blue-500:   #2196f3;
+  --color-blue-600:   #1565c0;
+  --color-blue-glow:  rgba(33, 150, 243, 0.35);
+
+  /* Gold accent family */
+  --color-gold-100:   #fff8e1;
+  --color-gold-300:   #ffd54f;
+  --color-gold-500:   #f5a623;
+  --color-gold-600:   #c77c00;
+  --color-gold-glow:  rgba(245, 166, 35, 0.30);
+
+  /* Status */
+  --color-critical:   #ef4444;
+  --color-high:       #f97316;
+  --color-medium:     #eab308;
+  --color-low:        #22c55e;
+  --color-info:       #3b82f6;
+
+  --color-critical-glow: rgba(239, 68, 68, 0.25);
+  --color-high-glow:     rgba(249, 115, 22, 0.25);
+  --color-medium-glow:   rgba(234, 179, 8, 0.25);
+  --color-low-glow:      rgba(34, 197, 94, 0.25);
+
+  /* Text */
+  --text-primary:     #e8f4fc;
+  --text-secondary:   #8ab4cc;
+  --text-muted:       #4a7a99;
+  --text-inverse:     #020b18;
+
+  /* Typography */
+  --font-display:     'Rajdhani', sans-serif;
+  --font-body:        'Space Grotesk', sans-serif;
+  --font-mono:        'JetBrains Mono', monospace;
+
+  /* Type scale */
+  --text-xs:   0.625rem;   /* 10px */
+  --text-sm:   0.75rem;    /* 12px */
+  --text-base: 0.875rem;   /* 14px */
+  --text-md:   1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.375rem;   /* 22px */
+  --text-2xl:  1.75rem;    /* 28px */
+  --text-3xl:  2.25rem;    /* 36px */
+  --text-4xl:  3rem;       /* 48px */
+
+  /* Spacing scale (4px base) */
+  --space-1:   0.25rem;
+  --space-2:   0.5rem;
+  --space-3:   0.75rem;
+  --space-4:   1rem;
+  --space-5:   1.25rem;
+  --space-6:   1.5rem;
+  --space-8:   2rem;
+  --space-10:  2.5rem;
+  --space-12:  3rem;
+  --space-16:  4rem;
+
+  /* Border radii */
+  --radius-sm:  3px;
+  --radius-md:  6px;
+  --radius-lg:  10px;
+  --radius-xl:  16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-panel:   0 0 0 1px var(--glass-border), 0 8px 32px rgba(0,0,0,0.45);
+  --shadow-card:    0 0 0 1px var(--glass-border), 0 4px 16px rgba(0,0,0,0.35);
+  --shadow-blue:    0 0 24px var(--color-blue-glow);
+  --shadow-gold:    0 0 20px var(--color-gold-glow);
+  --shadow-inset:   inset 0 1px 0 rgba(255,255,255,0.04);
+
+  /* Transitions */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --sidebar-width:     240px;
+  --navbar-height:     60px;
+  --panel-padding:     var(--space-5);
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  background-color: var(--color-void);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--color-surface-1); }
+::-webkit-scrollbar-thumb { background: var(--color-surface-3); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-blue-600); }
+
+/* ── Utility classes ───────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.text-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Background grid/scanline texture ─────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(33, 150, 243, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(33, 150, 243, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* ── Selection ─────────────────────────────────────────────── */
+::selection {
+  background: var(--color-blue-glow);
+  color: var(--text-primary);
+}

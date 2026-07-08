@@ -1,0 +1,4510 @@
+[
+  {
+    "alert_id": "913b4793-eee4-4e2f-bb5d-8699fcabb8c7",
+    "sector_id": "S015",
+    "sensor_id": "SEN0015",
+    "coordinates": {
+      "lat": 32.6008,
+      "lon": 74.1606
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.97,
+    "threat_score": 59,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-27T02:21:48Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 3,
+        "vehicle_detection": 24,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S015 with 97% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 6.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "8da66628-0d71-4c15-922d-89367f7638c5",
+    "sector_id": "S032",
+    "sensor_id": "SEN0032",
+    "coordinates": {
+      "lat": 32.1265,
+      "lon": 74.6433
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.9,
+    "threat_score": 24,
+    "threat_level": "Safe",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-26T19:02:18Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "low_visibility",
+      "historical_risk",
+      "patrol_gap",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 15,
+        "vehicle_detection": 3,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S032 with 90% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "7099d83e-718a-4f4a-97f8-52aac6bd2e9d",
+    "sector_id": "S018",
+    "sensor_id": "SEN0018",
+    "coordinates": {
+      "lat": 33.0528,
+      "lon": 74.2107
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.97,
+    "threat_score": 45,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-25T23:37:55Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "historical_risk",
+      "weather",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 10,
+        "vehicle_detection": 0,
+        "historical_risk": 7,
+        "visibility": 4,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S018 with 97% confidence",
+        "Sector visibility is Medium due to Dust Storm conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 1.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "dd01a7e7-f57c-4569-b819-213a311075ab",
+    "sector_id": "S019",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1951,
+      "lon": 74.1748
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.81,
+    "threat_score": 67,
+    "threat_level": "High",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-24T13:21:41Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 30,
+        "vehicle_detection": 14,
+        "historical_risk": 8,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Vehicle Detection detected in S019 with 81% confidence",
+        "Sector visibility is Medium due to Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 7.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "77fdac9c-22b5-4c33-a32d-4640bb56a8a6",
+    "sector_id": "S029",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1686,
+      "lon": 74.4095
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.84,
+    "threat_score": 45,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-28T01:36:59Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "patrol_gap",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 16,
+        "vehicle_detection": 23,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S029 with 84% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "be8e45a8-d0e8-417c-bdc0-17a23ac8c07b",
+    "sector_id": "S038",
+    "sensor_id": "SEN0038",
+    "coordinates": {
+      "lat": 33.0042,
+      "lon": 74.5865
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.92,
+    "threat_score": 36,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-24T04:01:06Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 34,
+        "vehicle_detection": 17,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S038 with 92% confidence",
+        "Sector visibility is Medium due to Snow conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 3.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "29395290-4ff6-49e7-acd2-505090cdecb0",
+    "sector_id": "S030",
+    "sensor_id": "SEN0030",
+    "coordinates": {
+      "lat": 33.3657,
+      "lon": 74.4065
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.84,
+    "threat_score": 54,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-26T17:45:32Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "low_visibility",
+      "historical_risk",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 0,
+        "vehicle_detection": 21,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Vehicle Detection detected in S030 with 84% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "0b2204fa-927b-46aa-9239-fc6783880bd9",
+    "sector_id": "S016",
+    "sensor_id": "SEN0061",
+    "coordinates": {
+      "lat": 32.7922,
+      "lon": 74.2418
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.93,
+    "threat_score": 49,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-27T22:28:34Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "vehicle_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 14,
+        "vehicle_detection": 2,
+        "historical_risk": 7,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S016 with 93% confidence",
+        "Sector visibility is Medium due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "d0bbc00c-7831-47d9-8bf9-9ff1c3c75dbc",
+    "sector_id": "S017",
+    "sensor_id": "SEN0017",
+    "coordinates": {
+      "lat": 32.9067,
+      "lon": 74.1579
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.81,
+    "threat_score": 41,
+    "threat_level": "Medium",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-25T09:44:06Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 6,
+        "vehicle_detection": 22,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S017 with 81% confidence",
+        "Sector visibility is Low due to Rain conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "398e6d6d-777b-4b91-8c8f-fd9849349341",
+    "sector_id": "S031",
+    "sensor_id": "SEN0076",
+    "coordinates": {
+      "lat": 32.0146,
+      "lon": 74.5957
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.95,
+    "threat_score": 63,
+    "threat_level": "High",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-28T09:33:40Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "patrol_gap",
+      "human_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 24,
+        "vehicle_detection": 7,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S031 with 95% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.5 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "122882ab-2316-4b28-b3af-95df8e5905bb",
+    "sector_id": "S031",
+    "sensor_id": "SEN0074",
+    "coordinates": {
+      "lat": 32.0146,
+      "lon": 74.5957
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.83,
+    "threat_score": 60,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-30T05:18:56Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "weather",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 32,
+        "vehicle_detection": 20,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S031 with 83% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.5 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "de97202a-c670-4dd5-845a-ba91febd5d17",
+    "sector_id": "S017",
+    "sensor_id": "SEN0017",
+    "coordinates": {
+      "lat": 32.9067,
+      "lon": 74.1579
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.79,
+    "threat_score": 36,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-29T01:00:38Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "human_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 30,
+        "vehicle_detection": 15,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S017 with 79% confidence",
+        "Sector visibility is Low due to Rain conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "c2ed73d3-402c-4334-974e-60402eab62b8",
+    "sector_id": "S015",
+    "sensor_id": "SEN0015",
+    "coordinates": {
+      "lat": 32.6008,
+      "lon": 74.1606
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.91,
+    "threat_score": 55,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-28T03:37:54Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 2,
+        "vehicle_detection": 18,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S015 with 91% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 6.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "cdb486e9-034c-4d5d-9516-f79a396fb4ee",
+    "sector_id": "S011",
+    "sensor_id": "SEN0011",
+    "coordinates": {
+      "lat": 31.9763,
+      "lon": 74.2085
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.79,
+    "threat_score": 81,
+    "threat_level": "Critical",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-29T22:28:22Z",
+    "recommended_action": "emergency_response",
+    "active_factors": [
+      "human_detected",
+      "vehicle_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 30,
+        "vehicle_detection": 15,
+        "historical_risk": 10,
+        "visibility": 10,
+        "patrol_gap": 7,
+        "weather": 5
+      },
+      "reasons": [
+        "Vehicle Detection detected in S011 with 79% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 10/10",
+        "Last patrol was 4.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "d001fcd8-9f48-413e-ac89-e71481a28164",
+    "sector_id": "S014",
+    "sensor_id": "SEN0014",
+    "coordinates": {
+      "lat": 32.4751,
+      "lon": 74.2269
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.95,
+    "threat_score": 64,
+    "threat_level": "High",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-28T02:32:32Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "vehicle_detected",
+      "historical_risk",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 4,
+        "vehicle_detection": 7,
+        "historical_risk": 9,
+        "visibility": 10,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S014 with 95% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 7.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "7f6c5528-41bd-48e2-a418-0e23cfc984a0",
+    "sector_id": "S026",
+    "sensor_id": "SEN0096",
+    "coordinates": {
+      "lat": 32.7865,
+      "lon": 74.4402
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.78,
+    "threat_score": 41,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-24T17:36:58Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 2,
+        "vehicle_detection": 25,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S026 with 78% confidence",
+        "Sector visibility is Medium due to Fog conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "e791b1a4-1795-4e0e-8fa4-7aa7f640723e",
+    "sector_id": "S032",
+    "sensor_id": "SEN0032",
+    "coordinates": {
+      "lat": 32.1265,
+      "lon": 74.6433
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.77,
+    "threat_score": 34,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-30T00:33:37Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "historical_risk",
+      "human_detected",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 33,
+        "vehicle_detection": 13,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S032 with 77% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "b3de2438-55b5-4222-b9c5-859ef2489cdc",
+    "sector_id": "S016",
+    "sensor_id": "SEN0093",
+    "coordinates": {
+      "lat": 32.7922,
+      "lon": 74.2418
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.94,
+    "threat_score": 46,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-29T09:06:48Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "human_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 34,
+        "vehicle_detection": 13,
+        "historical_risk": 7,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S016 with 94% confidence",
+        "Sector visibility is Medium due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "5d72ee4e-aa95-42ee-aed5-bc6b88b17a92",
+    "sector_id": "S017",
+    "sensor_id": "SEN0017",
+    "coordinates": {
+      "lat": 32.9067,
+      "lon": 74.1579
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.75,
+    "threat_score": 43,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-30T09:33:51Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "low_visibility",
+      "weather",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 9,
+        "vehicle_detection": 13,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S017 with 75% confidence",
+        "Sector visibility is Low due to Rain conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "f631f21a-8b93-4612-92d5-0f73e90996f4",
+    "sector_id": "S038",
+    "sensor_id": "SEN0100",
+    "coordinates": {
+      "lat": 33.0042,
+      "lon": 74.5865
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.81,
+    "threat_score": 33,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-26T00:49:16Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 35,
+        "vehicle_detection": 15,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S038 with 81% confidence",
+        "Sector visibility is Medium due to Snow conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 3.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "1f337ce8-de2b-4534-adf2-6322f0513c10",
+    "sector_id": "S014",
+    "sensor_id": "SEN0067",
+    "coordinates": {
+      "lat": 32.4751,
+      "lon": 74.2269
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.88,
+    "threat_score": 68,
+    "threat_level": "High",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-24T23:49:17Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "weather",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 14,
+        "vehicle_detection": 14,
+        "historical_risk": 9,
+        "visibility": 10,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S014 with 88% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 7.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "81e5e6ec-7821-4e99-b6c5-70db70c66834",
+    "sector_id": "S047",
+    "sensor_id": "SEN0047",
+    "coordinates": {
+      "lat": 32.8908,
+      "lon": 74.7902
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.77,
+    "threat_score": 57,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-30T16:50:24Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 30,
+        "vehicle_detection": 19,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 4,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S047 with 77% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 2.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "47c340b9-c652-4be6-b3bf-a6d790129298",
+    "sector_id": "S027",
+    "sensor_id": "SEN0027",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.77,
+    "threat_score": 46,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-29T22:50:05Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 3,
+        "vehicle_detection": 24,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S027 with 77% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "eb7d20e5-8129-45e7-9046-5b6df7c48760",
+    "sector_id": "S048",
+    "sensor_id": "SEN0084",
+    "coordinates": {
+      "lat": 33.0406,
+      "lon": 74.8334
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.9,
+    "threat_score": 35,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T16:12:14Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "weather",
+      "vehicle_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 10,
+        "vehicle_detection": 21,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 7,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S048 with 90% confidence",
+        "Sector visibility is Medium due to Dust Storm conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "69fb999a-e2ae-4bab-bda9-83e9d5c3d016",
+    "sector_id": "S002",
+    "sensor_id": "SEN0002",
+    "coordinates": {
+      "lat": 32.1027,
+      "lon": 73.9699
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.81,
+    "threat_score": 30,
+    "threat_level": "Safe",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T09:52:22Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "low_visibility",
+      "patrol_gap",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 33,
+        "vehicle_detection": 0,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 6,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S002 with 81% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 4.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "7b398e83-0674-4cd6-b530-647def637f06",
+    "sector_id": "S042",
+    "sensor_id": "SEN0081",
+    "coordinates": {
+      "lat": 32.1328,
+      "lon": 74.8364
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.97,
+    "threat_score": 54,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-25T10:22:47Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 29,
+        "vehicle_detection": 12,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S042 with 97% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "68d99300-584f-4ab9-9c0d-a97627efa408",
+    "sector_id": "S033",
+    "sensor_id": "SEN0065",
+    "coordinates": {
+      "lat": 32.3307,
+      "lon": 74.6029
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.81,
+    "threat_score": 46,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-29T05:56:43Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 34,
+        "vehicle_detection": 25,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S033 with 81% confidence",
+        "Sector visibility is Medium due to Snow conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 7.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "2280f56d-8bb0-4e96-9aa0-1b8530389f6d",
+    "sector_id": "S033",
+    "sensor_id": "SEN0070",
+    "coordinates": {
+      "lat": 32.3307,
+      "lon": 74.6029
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.92,
+    "threat_score": 48,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-27T11:25:35Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "patrol_gap",
+      "human_detected",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 7,
+        "vehicle_detection": 8,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S033 with 92% confidence",
+        "Sector visibility is Medium due to Snow conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 7.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "f26efb4d-c72e-47d0-9ecc-4b09936274b1",
+    "sector_id": "S004",
+    "sensor_id": "SEN0004",
+    "coordinates": {
+      "lat": 32.4847,
+      "lon": 74.0104
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.9,
+    "threat_score": 51,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-25T08:52:31Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "historical_risk",
+      "vehicle_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 5,
+        "vehicle_detection": 12,
+        "historical_risk": 8,
+        "visibility": 0,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S004 with 90% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "70b626f7-9681-403b-8542-f9da0ee5ee13",
+    "sector_id": "S039",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.2384,
+      "lon": 74.5906
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.93,
+    "threat_score": 42,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-28T06:54:42Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 11,
+        "vehicle_detection": 23,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S039 with 93% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 6.4 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "1d1e784f-f27a-4b45-a194-a9cf04dbf906",
+    "sector_id": "S039",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.2384,
+      "lon": 74.5906
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.97,
+    "threat_score": 55,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-26T22:59:09Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "weather",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 15,
+        "vehicle_detection": 19,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Vehicle Detection detected in S039 with 97% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 6.4 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "3128cd2b-7269-4724-badb-1a6c004f65a1",
+    "sector_id": "S021",
+    "sensor_id": "SEN0062",
+    "coordinates": {
+      "lat": 31.9985,
+      "lon": 74.4039
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.94,
+    "threat_score": 22,
+    "threat_level": "Safe",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-23T03:14:16Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "human_detected",
+      "low_visibility",
+      "historical_risk",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 20,
+        "vehicle_detection": 15,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S021 with 94% confidence",
+        "Sector visibility is Medium due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 2.6 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "b4fffc37-57e2-41ae-b1e8-b19498f7195b",
+    "sector_id": "S033",
+    "sensor_id": "SEN0070",
+    "coordinates": {
+      "lat": 32.3307,
+      "lon": 74.6029
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.87,
+    "threat_score": 38,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-28T20:41:13Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "patrol_gap",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 32,
+        "vehicle_detection": 11,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S033 with 87% confidence",
+        "Sector visibility is Medium due to Snow conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 7.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "1ab5f2a1-625a-455e-af6d-87e1ff4b382b",
+    "sector_id": "S026",
+    "sensor_id": "SEN0097",
+    "coordinates": {
+      "lat": 32.7865,
+      "lon": 74.4402
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.94,
+    "threat_score": 38,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-23T11:31:04Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 24,
+        "vehicle_detection": 18,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S026 with 94% confidence",
+        "Sector visibility is Medium due to Fog conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "052508e3-273f-4b35-b563-5bfc081a4028",
+    "sector_id": "S006",
+    "sensor_id": "SEN0075",
+    "coordinates": {
+      "lat": 32.7855,
+      "lon": 74.0366
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.84,
+    "threat_score": 35,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-27T13:44:25Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "vehicle_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 27,
+        "vehicle_detection": 6,
+        "historical_risk": 6,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Motion Detection detected in S006 with 84% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 7.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "703c08ed-affc-4661-9146-c93b8d7a5a28",
+    "sector_id": "S027",
+    "sensor_id": "SEN0072",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.84,
+    "threat_score": 43,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-28T03:31:50Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 15,
+        "vehicle_detection": 17,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S027 with 84% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "0febbc7e-2307-49c0-86c1-bb4aef56d97f",
+    "sector_id": "S027",
+    "sensor_id": "SEN0083",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.8,
+    "threat_score": 50,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-28T08:43:56Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "weather",
+      "historical_risk",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 19,
+        "vehicle_detection": 8,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S027 with 80% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "4f7475a0-78b1-4cbf-b0a3-ff884b0f44f5",
+    "sector_id": "S032",
+    "sensor_id": "SEN0032",
+    "coordinates": {
+      "lat": 32.1265,
+      "lon": 74.6433
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.85,
+    "threat_score": 20,
+    "threat_level": "Safe",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T06:21:24Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "low_visibility",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 16,
+        "vehicle_detection": 11,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S032 with 85% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "31523736-7dd2-4b3a-a3fd-84397b00ee45",
+    "sector_id": "S021",
+    "sensor_id": "SEN0091",
+    "coordinates": {
+      "lat": 31.9985,
+      "lon": 74.4039
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.88,
+    "threat_score": 31,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-29T10:19:21Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "patrol_gap",
+      "weather",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 22,
+        "vehicle_detection": 10,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Motion Detection detected in S021 with 88% confidence",
+        "Sector visibility is Medium due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 2.6 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "afe76e5a-2b9a-4cf8-a1cc-7f4cd8a98f2a",
+    "sector_id": "S039",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.2384,
+      "lon": 74.5906
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.87,
+    "threat_score": 42,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T07:34:55Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 26,
+        "vehicle_detection": 20,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S039 with 87% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 6.4 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "8f1202c2-4f5e-41d4-a697-f54834634232",
+    "sector_id": "S036",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 32.7334,
+      "lon": 74.5631
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.89,
+    "threat_score": 32,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-27T11:54:23Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "historical_risk",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 17,
+        "vehicle_detection": 14,
+        "historical_risk": 6,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S036 with 89% confidence",
+        "Sector visibility is Low due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 0.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "b799d4b6-57a0-44a3-97d5-048fefc434db",
+    "sector_id": "S044",
+    "sensor_id": "SEN0085",
+    "coordinates": {
+      "lat": 32.4729,
+      "lon": 74.7814
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.93,
+    "threat_score": 49,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-28T22:06:18Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 5,
+        "vehicle_detection": 6,
+        "historical_risk": 9,
+        "visibility": 0,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S044 with 93% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 3.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "4de38493-262f-4ae6-b6bc-b7e7b9c71ac5",
+    "sector_id": "S014",
+    "sensor_id": "SEN0067",
+    "coordinates": {
+      "lat": 32.4751,
+      "lon": 74.2269
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.77,
+    "threat_score": 75,
+    "threat_level": "High",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-30T09:41:16Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "human_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 9,
+        "vehicle_detection": 2,
+        "historical_risk": 9,
+        "visibility": 10,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S014 with 77% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 7.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "056c34ca-58fc-4571-966b-e5a5e8c92cda",
+    "sector_id": "S038",
+    "sensor_id": "SEN0056",
+    "coordinates": {
+      "lat": 33.0042,
+      "lon": 74.5865
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.82,
+    "threat_score": 43,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-28T17:41:11Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 22,
+        "vehicle_detection": 10,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S038 with 82% confidence",
+        "Sector visibility is Medium due to Snow conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 3.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "8d7e499b-53ff-4e26-aeed-1dc880b25e5f",
+    "sector_id": "S050",
+    "sensor_id": "SEN0050",
+    "coordinates": {
+      "lat": 33.3633,
+      "lon": 74.7835
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.86,
+    "threat_score": 48,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-27T23:40:53Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "low_visibility",
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 34,
+        "vehicle_detection": 9,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S050 with 86% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 4.4 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "ba345192-22c4-48f6-bbfc-11101545dd09",
+    "sector_id": "S021",
+    "sensor_id": "SEN0071",
+    "coordinates": {
+      "lat": 31.9985,
+      "lon": 74.4039
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.88,
+    "threat_score": 34,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-24T14:05:45Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 8,
+        "vehicle_detection": 11,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S021 with 88% confidence",
+        "Sector visibility is Medium due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 2.6 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "03b8b006-e6f0-4f7b-80a7-740a86e8e678",
+    "sector_id": "S018",
+    "sensor_id": "SEN0095",
+    "coordinates": {
+      "lat": 33.0528,
+      "lon": 74.2107
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.88,
+    "threat_score": 54,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-30T08:23:46Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "human_detected",
+      "historical_risk",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 26,
+        "vehicle_detection": 17,
+        "historical_risk": 7,
+        "visibility": 4,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S018 with 88% confidence",
+        "Sector visibility is Medium due to Dust Storm conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 1.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "cc1137ac-ce7a-497c-b9e4-a4e512794da2",
+    "sector_id": "S027",
+    "sensor_id": "SEN0083",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.81,
+    "threat_score": 47,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-29T08:34:49Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "historical_risk",
+      "weather",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 34,
+        "vehicle_detection": 25,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S027 with 81% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "d7d9c84d-3102-44bc-831f-566f4ee47e0d",
+    "sector_id": "S017",
+    "sensor_id": "SEN0017",
+    "coordinates": {
+      "lat": 32.9067,
+      "lon": 74.1579
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.8,
+    "threat_score": 30,
+    "threat_level": "Safe",
+    "alert_status": "open",
+    "timestamp": "2026-06-29T01:45:25Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "historical_risk",
+      "patrol_gap",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 12,
+        "vehicle_detection": 10,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S017 with 80% confidence",
+        "Sector visibility is Low due to Rain conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "31b0add6-9380-4cc3-b92f-6cf7ef5475d1",
+    "sector_id": "S001",
+    "sensor_id": "SEN0001",
+    "coordinates": {
+      "lat": 32.0236,
+      "lon": 74.0177
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.76,
+    "threat_score": 20,
+    "threat_level": "Safe",
+    "alert_status": "open",
+    "timestamp": "2026-06-29T12:57:56Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "low_visibility",
+      "human_detected",
+      "vehicle_detected",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 9,
+        "vehicle_detection": 0,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S001 with 76% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "d5861c3c-f6c6-4f52-9883-507c170a227f",
+    "sector_id": "S030",
+    "sensor_id": "SEN0030",
+    "coordinates": {
+      "lat": 33.3657,
+      "lon": 74.4065
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.83,
+    "threat_score": 55,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-25T07:30:14Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 9,
+        "vehicle_detection": 1,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S030 with 83% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "3cbc779e-d26d-4b99-9b26-da8761fe312c",
+    "sector_id": "S017",
+    "sensor_id": "SEN0017",
+    "coordinates": {
+      "lat": 32.9067,
+      "lon": 74.1579
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.77,
+    "threat_score": 30,
+    "threat_level": "Safe",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T09:22:04Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "weather",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 24,
+        "vehicle_detection": 24,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S017 with 77% confidence",
+        "Sector visibility is Low due to Rain conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "2879adb9-0cb8-48fc-8741-f521df2d106b",
+    "sector_id": "S029",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1686,
+      "lon": 74.4095
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.81,
+    "threat_score": 36,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-29T05:32:51Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "historical_risk",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 10,
+        "vehicle_detection": 20,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S029 with 81% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "fb4c4225-3095-4444-837c-0394eb4649bd",
+    "sector_id": "S042",
+    "sensor_id": "SEN0081",
+    "coordinates": {
+      "lat": 32.1328,
+      "lon": 74.8364
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.93,
+    "threat_score": 61,
+    "threat_level": "High",
+    "alert_status": "open",
+    "timestamp": "2026-06-23T01:55:52Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "human_detected",
+      "vehicle_detected",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 15,
+        "vehicle_detection": 20,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S042 with 93% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "f425acdd-9a09-4520-8460-e2640e1f6ceb",
+    "sector_id": "S027",
+    "sensor_id": "SEN0072",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.75,
+    "threat_score": 53,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-27T22:12:27Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "patrol_gap",
+      "vehicle_detected",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 5,
+        "vehicle_detection": 7,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Motion Detection detected in S027 with 75% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "00daa0fd-29be-430e-bed3-cc77d1bd76a9",
+    "sector_id": "S014",
+    "sensor_id": "SEN0067",
+    "coordinates": {
+      "lat": 32.4751,
+      "lon": 74.2269
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.77,
+    "threat_score": 70,
+    "threat_level": "High",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-30T20:52:23Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "weather",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 6,
+        "vehicle_detection": 4,
+        "historical_risk": 9,
+        "visibility": 10,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S014 with 77% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 7.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "dbfeacdc-1e2f-41b6-a600-ba1470ca4361",
+    "sector_id": "S030",
+    "sensor_id": "SEN0030",
+    "coordinates": {
+      "lat": 33.3657,
+      "lon": 74.4065
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.83,
+    "threat_score": 55,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-25T07:28:52Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 22,
+        "vehicle_detection": 23,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S030 with 83% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "925917a8-9784-4bc4-8e28-97ebe18e4f7f",
+    "sector_id": "S011",
+    "sensor_id": "SEN0087",
+    "coordinates": {
+      "lat": 31.9763,
+      "lon": 74.2085
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.97,
+    "threat_score": 87,
+    "threat_level": "Critical",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-26T04:30:33Z",
+    "recommended_action": "emergency_response",
+    "active_factors": [
+      "patrol_gap",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 34,
+        "vehicle_detection": 11,
+        "historical_risk": 10,
+        "visibility": 10,
+        "patrol_gap": 7,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S011 with 97% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 10/10",
+        "Last patrol was 4.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "5b453278-7b6a-4f3e-9f38-e0413fb5d670",
+    "sector_id": "S019",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1951,
+      "lon": 74.1748
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.93,
+    "threat_score": 64,
+    "threat_level": "High",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-28T19:41:55Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "historical_risk",
+      "weather",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 29,
+        "vehicle_detection": 0,
+        "historical_risk": 8,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S019 with 93% confidence",
+        "Sector visibility is Medium due to Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 7.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "76d2f309-a622-4b25-b410-10882b13f64e",
+    "sector_id": "S044",
+    "sensor_id": "SEN0098",
+    "coordinates": {
+      "lat": 32.4729,
+      "lon": 74.7814
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.87,
+    "threat_score": 35,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-25T02:59:44Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "patrol_gap",
+      "low_visibility",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 33,
+        "vehicle_detection": 21,
+        "historical_risk": 9,
+        "visibility": 0,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S044 with 87% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 3.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "1f28d37f-91d2-4c0e-ba98-f378e054dbcd",
+    "sector_id": "S030",
+    "sensor_id": "SEN0030",
+    "coordinates": {
+      "lat": 33.3657,
+      "lon": 74.4065
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.9,
+    "threat_score": 43,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-29T18:41:22Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 11,
+        "vehicle_detection": 1,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S030 with 90% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "eb5f1fa9-8beb-4fd3-9f57-79c1ba284436",
+    "sector_id": "S015",
+    "sensor_id": "SEN0015",
+    "coordinates": {
+      "lat": 32.6008,
+      "lon": 74.1606
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.87,
+    "threat_score": 56,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-24T00:43:31Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "patrol_gap",
+      "historical_risk",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 23,
+        "vehicle_detection": 7,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S015 with 87% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 6.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "585dfb3d-44d5-4e78-b121-72659d059e53",
+    "sector_id": "S036",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 32.7334,
+      "lon": 74.5631
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.92,
+    "threat_score": 36,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-29T07:23:24Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 26,
+        "vehicle_detection": 11,
+        "historical_risk": 6,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S036 with 92% confidence",
+        "Sector visibility is Low due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 0.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "cc71fffa-8516-436e-ae40-c39c990ad4f1",
+    "sector_id": "S047",
+    "sensor_id": "SEN0047",
+    "coordinates": {
+      "lat": 32.8908,
+      "lon": 74.7902
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.95,
+    "threat_score": 61,
+    "threat_level": "High",
+    "alert_status": "open",
+    "timestamp": "2026-06-29T13:10:51Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "human_detected",
+      "weather",
+      "vehicle_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 24,
+        "vehicle_detection": 6,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 4,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S047 with 95% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 2.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "f97ab19f-e727-4bdd-b116-932a69ebfea8",
+    "sector_id": "S015",
+    "sensor_id": "SEN0015",
+    "coordinates": {
+      "lat": 32.6008,
+      "lon": 74.1606
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.89,
+    "threat_score": 72,
+    "threat_level": "High",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-23T23:08:15Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "patrol_gap",
+      "historical_risk",
+      "low_visibility",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 27,
+        "vehicle_detection": 3,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Vehicle Detection detected in S015 with 89% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 6.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "8777efff-39e5-4252-945b-08cdbbf0c1ce",
+    "sector_id": "S014",
+    "sensor_id": "SEN0014",
+    "coordinates": {
+      "lat": 32.4751,
+      "lon": 74.2269
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.88,
+    "threat_score": 70,
+    "threat_level": "High",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-23T10:17:44Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "historical_risk",
+      "weather",
+      "low_visibility",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 27,
+        "vehicle_detection": 23,
+        "historical_risk": 9,
+        "visibility": 10,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S014 with 88% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 7.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "6efd141f-d2f9-4d90-bae0-ddac3bdddc2b",
+    "sector_id": "S019",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1951,
+      "lon": 74.1748
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.9,
+    "threat_score": 62,
+    "threat_level": "High",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T10:46:36Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "human_detected",
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 1,
+        "vehicle_detection": 16,
+        "historical_risk": 8,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S019 with 90% confidence",
+        "Sector visibility is Medium due to Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 7.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "8f01e675-1f23-4977-ad4c-ce25ef0d0a0b",
+    "sector_id": "S011",
+    "sensor_id": "SEN0087",
+    "coordinates": {
+      "lat": 31.9763,
+      "lon": 74.2085
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.75,
+    "threat_score": 71,
+    "threat_level": "High",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-29T23:22:47Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "patrol_gap",
+      "weather",
+      "vehicle_detected",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 2,
+        "vehicle_detection": 14,
+        "historical_risk": 10,
+        "visibility": 10,
+        "patrol_gap": 7,
+        "weather": 5
+      },
+      "reasons": [
+        "Vehicle Detection detected in S011 with 75% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 10/10",
+        "Last patrol was 4.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "3293fa57-984b-4697-9912-65620cf33f4c",
+    "sector_id": "S021",
+    "sensor_id": "SEN0062",
+    "coordinates": {
+      "lat": 31.9985,
+      "lon": 74.4039
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.78,
+    "threat_score": 38,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T13:09:28Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "vehicle_detected",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 20,
+        "vehicle_detection": 25,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Motion Detection detected in S021 with 78% confidence",
+        "Sector visibility is Medium due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 2.6 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "9664feec-8c1f-4dbc-a6c2-71c09d36d4d1",
+    "sector_id": "S030",
+    "sensor_id": "SEN0030",
+    "coordinates": {
+      "lat": 33.3657,
+      "lon": 74.4065
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.87,
+    "threat_score": 33,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-26T20:28:13Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "human_detected",
+      "patrol_gap",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 22,
+        "vehicle_detection": 13,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S030 with 87% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "5c6ea8c7-e7e1-46d1-9824-5671726cc741",
+    "sector_id": "S027",
+    "sensor_id": "SEN0027",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.96,
+    "threat_score": 58,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-30T01:25:24Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "historical_risk",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 20,
+        "vehicle_detection": 17,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S027 with 96% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "814d5b3f-7ec7-46f7-8dcb-ae6789359378",
+    "sector_id": "S033",
+    "sensor_id": "SEN0065",
+    "coordinates": {
+      "lat": 32.3307,
+      "lon": 74.6029
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.83,
+    "threat_score": 34,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-24T07:26:26Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "human_detected",
+      "vehicle_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 18,
+        "vehicle_detection": 25,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S033 with 83% confidence",
+        "Sector visibility is Medium due to Snow conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 7.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "2b125917-44f0-438c-8a44-8a0f4f617add",
+    "sector_id": "S026",
+    "sensor_id": "SEN0026",
+    "coordinates": {
+      "lat": 32.7865,
+      "lon": 74.4402
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.78,
+    "threat_score": 50,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-30T04:49:48Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 27,
+        "vehicle_detection": 24,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S026 with 78% confidence",
+        "Sector visibility is Medium due to Fog conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "12283ca2-bba3-43c3-9fa4-162f242398c8",
+    "sector_id": "S041",
+    "sensor_id": "SEN0055",
+    "coordinates": {
+      "lat": 32.0372,
+      "lon": 74.8359
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.93,
+    "threat_score": 47,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-24T01:38:52Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "weather",
+      "vehicle_detected",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 4,
+        "vehicle_detection": 8,
+        "historical_risk": 8,
+        "visibility": 4,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S041 with 93% confidence",
+        "Sector visibility is Medium due to Rain conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "9154df94-625a-44e4-892c-6e976ce6b9cb",
+    "sector_id": "S044",
+    "sensor_id": "SEN0085",
+    "coordinates": {
+      "lat": 32.4729,
+      "lon": 74.7814
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.83,
+    "threat_score": 37,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-24T08:51:42Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 1,
+        "vehicle_detection": 24,
+        "historical_risk": 9,
+        "visibility": 0,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S044 with 83% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 3.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "21882ea8-ca9a-45f4-bebe-39598caf2ced",
+    "sector_id": "S018",
+    "sensor_id": "SEN0018",
+    "coordinates": {
+      "lat": 33.0528,
+      "lon": 74.2107
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.99,
+    "threat_score": 55,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-28T08:12:05Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 9,
+        "vehicle_detection": 24,
+        "historical_risk": 7,
+        "visibility": 4,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S018 with 99% confidence",
+        "Sector visibility is Medium due to Dust Storm conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 1.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "432f328b-7b10-4133-a676-caf9c89082f7",
+    "sector_id": "S042",
+    "sensor_id": "SEN0081",
+    "coordinates": {
+      "lat": 32.1328,
+      "lon": 74.8364
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.78,
+    "threat_score": 52,
+    "threat_level": "Medium",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-28T13:14:43Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "historical_risk",
+      "low_visibility",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 1,
+        "vehicle_detection": 10,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S042 with 78% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "bb51aa59-cc68-4356-a394-e64759f1a37f",
+    "sector_id": "S015",
+    "sensor_id": "SEN0015",
+    "coordinates": {
+      "lat": 32.6008,
+      "lon": 74.1606
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.8,
+    "threat_score": 79,
+    "threat_level": "High",
+    "alert_status": "open",
+    "timestamp": "2026-06-23T02:28:55Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "weather",
+      "human_detected",
+      "low_visibility",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 33,
+        "vehicle_detection": 1,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S015 with 80% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 6.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "b519f210-adab-4a1e-ace2-b93143fd483f",
+    "sector_id": "S017",
+    "sensor_id": "SEN0017",
+    "coordinates": {
+      "lat": 32.9067,
+      "lon": 74.1579
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.76,
+    "threat_score": 50,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-26T20:45:23Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 17,
+        "vehicle_detection": 21,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S017 with 76% confidence",
+        "Sector visibility is Low due to Rain conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "7c619f4d-4e80-490b-99c2-106cc4446790",
+    "sector_id": "S050",
+    "sensor_id": "SEN0050",
+    "coordinates": {
+      "lat": 33.3633,
+      "lon": 74.7835
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.96,
+    "threat_score": 49,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-24T14:50:32Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "historical_risk",
+      "low_visibility",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 34,
+        "vehicle_detection": 2,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S050 with 96% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 4.4 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "254fb810-8e1d-4c71-aad6-deea64614539",
+    "sector_id": "S014",
+    "sensor_id": "SEN0014",
+    "coordinates": {
+      "lat": 32.4751,
+      "lon": 74.2269
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.87,
+    "threat_score": 77,
+    "threat_level": "High",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-30T20:59:05Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "historical_risk",
+      "weather",
+      "low_visibility",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 10,
+        "vehicle_detection": 0,
+        "historical_risk": 9,
+        "visibility": 10,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S014 with 87% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 7.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "72043b6e-9cc3-48ba-bdcc-19e6e2bb15f8",
+    "sector_id": "S021",
+    "sensor_id": "SEN0091",
+    "coordinates": {
+      "lat": 31.9985,
+      "lon": 74.4039
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.83,
+    "threat_score": 27,
+    "threat_level": "Safe",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-26T20:34:48Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "human_detected",
+      "patrol_gap",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 14,
+        "vehicle_detection": 4,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Motion Detection detected in S021 with 83% confidence",
+        "Sector visibility is Medium due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 2.6 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "94895cbd-837c-4d2b-ad57-bf0a76491200",
+    "sector_id": "S019",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1951,
+      "lon": 74.1748
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.97,
+    "threat_score": 47,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-27T08:59:28Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 21,
+        "vehicle_detection": 14,
+        "historical_risk": 8,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Vehicle Detection detected in S019 with 97% confidence",
+        "Sector visibility is Medium due to Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 7.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "7824db2f-f395-4d81-884f-232695912d16",
+    "sector_id": "S032",
+    "sensor_id": "SEN0032",
+    "coordinates": {
+      "lat": 32.1265,
+      "lon": 74.6433
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.8,
+    "threat_score": 33,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-27T17:55:20Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "vehicle_detected",
+      "low_visibility",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 10,
+        "vehicle_detection": 10,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S032 with 80% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "e7538842-6b74-4971-a3c2-d617fddad99d",
+    "sector_id": "S004",
+    "sensor_id": "SEN0004",
+    "coordinates": {
+      "lat": 32.4847,
+      "lon": 74.0104
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.79,
+    "threat_score": 53,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-25T08:48:45Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "historical_risk",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 12,
+        "vehicle_detection": 3,
+        "historical_risk": 8,
+        "visibility": 0,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S004 with 79% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "3570022b-9ee9-4061-ad1a-8cfc64a86b15",
+    "sector_id": "S011",
+    "sensor_id": "SEN0011",
+    "coordinates": {
+      "lat": 31.9763,
+      "lon": 74.2085
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.76,
+    "threat_score": 84,
+    "threat_level": "Critical",
+    "alert_status": "open",
+    "timestamp": "2026-06-27T03:00:50Z",
+    "recommended_action": "emergency_response",
+    "active_factors": [
+      "human_detected",
+      "historical_risk",
+      "weather",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 30,
+        "vehicle_detection": 4,
+        "historical_risk": 10,
+        "visibility": 10,
+        "patrol_gap": 7,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S011 with 76% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 10/10",
+        "Last patrol was 4.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "e3e34616-571e-45dc-b40e-ac7c12938479",
+    "sector_id": "S031",
+    "sensor_id": "SEN0076",
+    "coordinates": {
+      "lat": 32.0146,
+      "lon": 74.5957
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.86,
+    "threat_score": 50,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-23T07:06:54Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 26,
+        "vehicle_detection": 24,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S031 with 86% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.5 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "6358be1d-6b53-475c-936a-cb6456b2b6d5",
+    "sector_id": "S001",
+    "sensor_id": "SEN0001",
+    "coordinates": {
+      "lat": 32.0236,
+      "lon": 74.0177
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.98,
+    "threat_score": 38,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-27T16:10:53Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "low_visibility",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 29,
+        "vehicle_detection": 7,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S001 with 98% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "c575b07a-ee92-4aa9-ba99-83e94ed0570e",
+    "sector_id": "S027",
+    "sensor_id": "SEN0083",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.94,
+    "threat_score": 58,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-25T09:35:17Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "weather",
+      "human_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 6,
+        "vehicle_detection": 14,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S027 with 94% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "db0a99a2-2553-46b5-b4d1-81d4134e7d2f",
+    "sector_id": "S029",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1686,
+      "lon": 74.4095
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.95,
+    "threat_score": 37,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-23T23:12:29Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "human_detected",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 18,
+        "vehicle_detection": 14,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S029 with 95% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "4091f3df-54cc-4b70-90b1-3cc10b56ee96",
+    "sector_id": "S026",
+    "sensor_id": "SEN0096",
+    "coordinates": {
+      "lat": 32.7865,
+      "lon": 74.4402
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.94,
+    "threat_score": 49,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T02:17:01Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "vehicle_detected",
+      "low_visibility",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 28,
+        "vehicle_detection": 2,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S026 with 94% confidence",
+        "Sector visibility is Medium due to Fog conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "b76776ec-cd02-48bf-9181-3f359a82808e",
+    "sector_id": "S042",
+    "sensor_id": "SEN0081",
+    "coordinates": {
+      "lat": 32.1328,
+      "lon": 74.8364
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.79,
+    "threat_score": 67,
+    "threat_level": "High",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-24T08:54:36Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "vehicle_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 12,
+        "vehicle_detection": 14,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S042 with 79% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.9 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "eef8f6b7-4494-4334-acde-38f89e305bd2",
+    "sector_id": "S004",
+    "sensor_id": "SEN0004",
+    "coordinates": {
+      "lat": 32.4847,
+      "lon": 74.0104
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.83,
+    "threat_score": 52,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-29T18:29:36Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "human_detected",
+      "low_visibility",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 32,
+        "vehicle_detection": 19,
+        "historical_risk": 8,
+        "visibility": 0,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Vehicle Detection detected in S004 with 83% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "36f79011-9a72-4cb3-a874-33308655ad28",
+    "sector_id": "S014",
+    "sensor_id": "SEN0067",
+    "coordinates": {
+      "lat": 32.4751,
+      "lon": 74.2269
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.88,
+    "threat_score": 84,
+    "threat_level": "Critical",
+    "alert_status": "open",
+    "timestamp": "2026-06-25T03:19:22Z",
+    "recommended_action": "emergency_response",
+    "active_factors": [
+      "vehicle_detected",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 11,
+        "vehicle_detection": 24,
+        "historical_risk": 9,
+        "visibility": 10,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S014 with 88% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 7.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "cc415e14-d811-4034-b343-9ee855aebe20",
+    "sector_id": "S041",
+    "sensor_id": "SEN0053",
+    "coordinates": {
+      "lat": 32.0372,
+      "lon": 74.8359
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.85,
+    "threat_score": 53,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-23T12:34:53Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 0,
+        "vehicle_detection": 19,
+        "historical_risk": 8,
+        "visibility": 4,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Motion Detection detected in S041 with 85% confidence",
+        "Sector visibility is Medium due to Rain conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "da0aaf50-deb7-4b4b-9f73-50ef6ce55b28",
+    "sector_id": "S044",
+    "sensor_id": "SEN0085",
+    "coordinates": {
+      "lat": 32.4729,
+      "lon": 74.7814
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.75,
+    "threat_score": 50,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-30T02:18:33Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "vehicle_detected",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 30,
+        "vehicle_detection": 14,
+        "historical_risk": 9,
+        "visibility": 0,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S044 with 75% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 3.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "066dd074-8623-4ed1-a5ff-3d0c9ab17b8a",
+    "sector_id": "S027",
+    "sensor_id": "SEN0083",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.77,
+    "threat_score": 35,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-26T02:34:29Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 9,
+        "vehicle_detection": 1,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S027 with 77% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "029a26ad-451e-4919-899f-14f50d0efa03",
+    "sector_id": "S038",
+    "sensor_id": "SEN0056",
+    "coordinates": {
+      "lat": 33.0042,
+      "lon": 74.5865
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.76,
+    "threat_score": 41,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-26T11:16:59Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 11,
+        "vehicle_detection": 5,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S038 with 76% confidence",
+        "Sector visibility is Medium due to Snow conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 3.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "b86b807b-1253-4cd4-815f-838219b3603c",
+    "sector_id": "S039",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.2384,
+      "lon": 74.5906
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.82,
+    "threat_score": 58,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-28T07:27:27Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "weather",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 20,
+        "vehicle_detection": 11,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S039 with 82% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 6.4 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "390ad9a8-a843-4bb7-a26c-2b1ae8578171",
+    "sector_id": "S026",
+    "sensor_id": "SEN0026",
+    "coordinates": {
+      "lat": 32.7865,
+      "lon": 74.4402
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.93,
+    "threat_score": 37,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-28T18:30:09Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "patrol_gap",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 33,
+        "vehicle_detection": 6,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S026 with 93% confidence",
+        "Sector visibility is Medium due to Fog conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "1bdf4c7c-1940-42e7-bcde-f8f575a459d5",
+    "sector_id": "S041",
+    "sensor_id": "SEN0055",
+    "coordinates": {
+      "lat": 32.0372,
+      "lon": 74.8359
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.9,
+    "threat_score": 48,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-29T06:28:20Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "historical_risk",
+      "low_visibility",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 20,
+        "vehicle_detection": 8,
+        "historical_risk": 8,
+        "visibility": 4,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S041 with 90% confidence",
+        "Sector visibility is Medium due to Rain conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "d5609fbf-3038-4a44-ba84-8dcb598bfcb1",
+    "sector_id": "S031",
+    "sensor_id": "SEN0076",
+    "coordinates": {
+      "lat": 32.0146,
+      "lon": 74.5957
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.99,
+    "threat_score": 49,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-23T05:28:24Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "vehicle_detected",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 18,
+        "vehicle_detection": 6,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S031 with 99% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.5 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "f7a6162d-16b0-4915-a50d-18606fe7fcf1",
+    "sector_id": "S001",
+    "sensor_id": "SEN0001",
+    "coordinates": {
+      "lat": 32.0236,
+      "lon": 74.0177
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.76,
+    "threat_score": 38,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-24T09:12:43Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "vehicle_detected",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 12,
+        "vehicle_detection": 22,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 3,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S001 with 76% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 2.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "08c4a1a8-f8a6-4807-9a13-5dc1c5efd3d5",
+    "sector_id": "S018",
+    "sensor_id": "SEN0095",
+    "coordinates": {
+      "lat": 33.0528,
+      "lon": 74.2107
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.94,
+    "threat_score": 39,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-25T22:07:21Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "low_visibility",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 11,
+        "vehicle_detection": 6,
+        "historical_risk": 7,
+        "visibility": 4,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S018 with 94% confidence",
+        "Sector visibility is Medium due to Dust Storm conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 1.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "762f5d41-e74a-4da7-9721-b847445881d0",
+    "sector_id": "S019",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1951,
+      "lon": 74.1748
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.95,
+    "threat_score": 60,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-28T07:05:24Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "historical_risk",
+      "low_visibility"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 26,
+        "vehicle_detection": 23,
+        "historical_risk": 8,
+        "visibility": 4,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S019 with 95% confidence",
+        "Sector visibility is Medium due to Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 7.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "1b1f9a56-885c-4879-9bda-98668f5caac9",
+    "sector_id": "S002",
+    "sensor_id": "SEN0002",
+    "coordinates": {
+      "lat": 32.1027,
+      "lon": 73.9699
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.89,
+    "threat_score": 42,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-27T03:31:43Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "vehicle_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 1,
+        "vehicle_detection": 10,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 6,
+        "weather": 0
+      },
+      "reasons": [
+        "Motion Detection detected in S002 with 89% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 4.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "cfef37ea-d3cf-4624-b18d-3317167db235",
+    "sector_id": "S026",
+    "sensor_id": "SEN0097",
+    "coordinates": {
+      "lat": 32.7865,
+      "lon": 74.4402
+    },
+    "event_type": "Vehicle Detection",
+    "confidence": 0.88,
+    "threat_score": 53,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-28T03:07:09Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "historical_risk",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 17,
+        "vehicle_detection": 13,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Vehicle Detection detected in S026 with 88% confidence",
+        "Sector visibility is Medium due to Fog conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "8a953c10-9b65-468b-adc1-1c857afaefd9",
+    "sector_id": "S004",
+    "sensor_id": "SEN0004",
+    "coordinates": {
+      "lat": 32.4847,
+      "lon": 74.0104
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.96,
+    "threat_score": 44,
+    "threat_level": "Medium",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-26T15:41:45Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 2,
+        "vehicle_detection": 24,
+        "historical_risk": 8,
+        "visibility": 0,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Motion Detection detected in S004 with 96% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 1.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "3774188d-8045-4dc8-8a9d-0bcba0e8ef69",
+    "sector_id": "S015",
+    "sensor_id": "SEN0015",
+    "coordinates": {
+      "lat": 32.6008,
+      "lon": 74.1606
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.86,
+    "threat_score": 80,
+    "threat_level": "High",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-28T15:53:05Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "weather",
+      "patrol_gap",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 20,
+        "vehicle_detection": 4,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S015 with 86% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 6.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "3779621e-3bc7-4c4c-9fae-15e27f5e91ff",
+    "sector_id": "S044",
+    "sensor_id": "SEN0051",
+    "coordinates": {
+      "lat": 32.4729,
+      "lon": 74.7814
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.95,
+    "threat_score": 56,
+    "threat_level": "Medium",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-26T23:12:35Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "patrol_gap",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 0,
+        "vehicle_detection": 9,
+        "historical_risk": 9,
+        "visibility": 0,
+        "patrol_gap": 5,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S044 with 95% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 3.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "e333b456-1740-4f66-9f63-a1a53b892861",
+    "sector_id": "S002",
+    "sensor_id": "SEN0002",
+    "coordinates": {
+      "lat": 32.1027,
+      "lon": 73.9699
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.83,
+    "threat_score": 28,
+    "threat_level": "Safe",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-26T21:38:16Z",
+    "recommended_action": "continue_monitoring",
+    "active_factors": [
+      "weather",
+      "vehicle_detected",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 12,
+        "vehicle_detection": 6,
+        "historical_risk": 5,
+        "visibility": 0,
+        "patrol_gap": 6,
+        "weather": 0
+      },
+      "reasons": [
+        "Human Detection detected in S002 with 83% confidence",
+        "Sector visibility is High due to Clear conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 4.3 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "0396abdf-cabc-43c0-b623-1f1f2847c92e",
+    "sector_id": "S018",
+    "sensor_id": "SEN0095",
+    "coordinates": {
+      "lat": 33.0528,
+      "lon": 74.2107
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.88,
+    "threat_score": 51,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-28T16:57:57Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 32,
+        "vehicle_detection": 3,
+        "historical_risk": 7,
+        "visibility": 4,
+        "patrol_gap": 2,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S018 with 88% confidence",
+        "Sector visibility is Medium due to Dust Storm conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 1.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "70b5f35c-bf6f-425a-954e-a62e07aa939c",
+    "sector_id": "S015",
+    "sensor_id": "SEN0015",
+    "coordinates": {
+      "lat": 32.6008,
+      "lon": 74.1606
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.88,
+    "threat_score": 59,
+    "threat_level": "Medium",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-26T03:59:54Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "historical_risk",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 21,
+        "vehicle_detection": 17,
+        "historical_risk": 8,
+        "visibility": 10,
+        "patrol_gap": 9,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S015 with 88% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 8/10",
+        "Last patrol was 6.2 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "c9fbd768-030d-49d2-9935-3b3fceacd0b5",
+    "sector_id": "S029",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1686,
+      "lon": 74.4095
+    },
+    "event_type": "Human Detection",
+    "confidence": 0.76,
+    "threat_score": 45,
+    "threat_level": "Medium",
+    "alert_status": "escalated",
+    "timestamp": "2026-06-30T18:51:01Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 11,
+        "vehicle_detection": 22,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Human Detection detected in S029 with 76% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "7de72ef6-5b4f-420c-8bfe-9e1d069d4075",
+    "sector_id": "S036",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 32.7334,
+      "lon": 74.5631
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.96,
+    "threat_score": 49,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-25T15:29:16Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "human_detected",
+      "low_visibility",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 8,
+        "vehicle_detection": 2,
+        "historical_risk": 6,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 0
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S036 with 96% confidence",
+        "Sector visibility is Low due to Clear conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 0.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "551003dd-a324-47fe-8089-a7e3a79daa6c",
+    "sector_id": "S048",
+    "sensor_id": "SEN0084",
+    "coordinates": {
+      "lat": 33.0406,
+      "lon": 74.8334
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.77,
+    "threat_score": 56,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-23T07:00:50Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "patrol_gap",
+      "historical_risk"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 23,
+        "vehicle_detection": 12,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 7,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S048 with 77% confidence",
+        "Sector visibility is Medium due to Dust Storm conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "f2cd929f-d0fb-469c-9804-597db3b77246",
+    "sector_id": "S014",
+    "sensor_id": "SEN0088",
+    "coordinates": {
+      "lat": 32.4751,
+      "lon": 74.2269
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.97,
+    "threat_score": 85,
+    "threat_level": "Critical",
+    "alert_status": "resolved",
+    "timestamp": "2026-06-25T07:44:03Z",
+    "recommended_action": "emergency_response",
+    "active_factors": [
+      "low_visibility",
+      "human_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 22,
+        "vehicle_detection": 15,
+        "historical_risk": 9,
+        "visibility": 10,
+        "patrol_gap": 10,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S014 with 97% confidence",
+        "Sector visibility is Low due to Dust Storm conditions",
+        "Historical risk score for this sector is 9/10",
+        "Last patrol was 7.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "cfac1cd0-253e-4f23-bddf-77b37b98ee01",
+    "sector_id": "S029",
+    "sensor_id": null,
+    "coordinates": {
+      "lat": 33.1686,
+      "lon": 74.4095
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.95,
+    "threat_score": 54,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-28T06:08:39Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "historical_risk",
+      "weather",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 34,
+        "vehicle_detection": 14,
+        "historical_risk": 5,
+        "visibility": 10,
+        "patrol_gap": 1,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S029 with 95% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 5/10",
+        "Last patrol was 1.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "2b67608a-1495-4d42-9a8d-1fe637ef672c",
+    "sector_id": "S026",
+    "sensor_id": "SEN0097",
+    "coordinates": {
+      "lat": 32.7865,
+      "lon": 74.4402
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.85,
+    "threat_score": 42,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-23T10:10:43Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "weather",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 27,
+        "vehicle_detection": 25,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 6,
+        "weather": 5
+      },
+      "reasons": [
+        "Radar Contact detected in S026 with 85% confidence",
+        "Sector visibility is Medium due to Fog conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.1 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "f6c044c2-f61a-4be5-8c05-4a361b2b5a15",
+    "sector_id": "S027",
+    "sensor_id": "SEN0086",
+    "coordinates": {
+      "lat": 32.9495,
+      "lon": 74.4056
+    },
+    "event_type": "Radar Contact",
+    "confidence": 0.94,
+    "threat_score": 57,
+    "threat_level": "Medium",
+    "alert_status": "open",
+    "timestamp": "2026-06-28T22:15:19Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "low_visibility",
+      "human_detected",
+      "weather",
+      "vehicle_detected"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 35,
+        "vehicle_detection": 3,
+        "historical_risk": 7,
+        "visibility": 0,
+        "patrol_gap": 10,
+        "weather": 0
+      },
+      "reasons": [
+        "Radar Contact detected in S027 with 94% confidence",
+        "Sector visibility is High due to Rain conditions",
+        "Historical risk score for this sector is 7/10",
+        "Last patrol was 7.7 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "7115d58e-f777-4567-bd32-bd985f548e79",
+    "sector_id": "S048",
+    "sensor_id": "SEN0084",
+    "coordinates": {
+      "lat": 33.0406,
+      "lon": 74.8334
+    },
+    "event_type": "Thermal Anomaly",
+    "confidence": 0.79,
+    "threat_score": 37,
+    "threat_level": "Medium",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-24T11:43:23Z",
+    "recommended_action": "notify_operator",
+    "active_factors": [
+      "human_detected",
+      "weather",
+      "vehicle_detected",
+      "patrol_gap"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 0,
+        "vehicle_detection": 24,
+        "historical_risk": 6,
+        "visibility": 4,
+        "patrol_gap": 7,
+        "weather": 5
+      },
+      "reasons": [
+        "Thermal Anomaly detected in S048 with 79% confidence",
+        "Sector visibility is Medium due to Dust Storm conditions",
+        "Historical risk score for this sector is 6/10",
+        "Last patrol was 4.8 hours ago"
+      ]
+    }
+  },
+  {
+    "alert_id": "42c22e70-e6ea-4263-b04a-1f8daf828ca0",
+    "sector_id": "S011",
+    "sensor_id": "SEN0011",
+    "coordinates": {
+      "lat": 31.9763,
+      "lon": 74.2085
+    },
+    "event_type": "Motion Detection",
+    "confidence": 0.86,
+    "threat_score": 77,
+    "threat_level": "High",
+    "alert_status": "acknowledged",
+    "timestamp": "2026-06-23T16:01:21Z",
+    "recommended_action": "dispatch_patrol",
+    "active_factors": [
+      "historical_risk",
+      "patrol_gap",
+      "weather"
+    ],
+    "explainability": {
+      "score_breakdown": {
+        "human_detection": 27,
+        "vehicle_detection": 22,
+        "historical_risk": 10,
+        "visibility": 10,
+        "patrol_gap": 7,
+        "weather": 5
+      },
+      "reasons": [
+        "Motion Detection detected in S011 with 86% confidence",
+        "Sector visibility is Low due to Fog conditions",
+        "Historical risk score for this sector is 10/10",
+        "Last patrol was 4.7 hours ago"
+      ]
+    }
+  }
+]
