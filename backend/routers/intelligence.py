@@ -3,6 +3,8 @@ Intelligence Router — endpoints powered by the Threat Engine module.
 """
 
 from fastapi import APIRouter, HTTPException
+from dsa.graph_builder import load_alerts
+from backend.models.schemas import ExplanationResponse
 
 from backend.services.planning_service import get_sector_threat
 from backend.intelligence.threat_engine import calculate_threat_score
@@ -22,7 +24,7 @@ def get_threat(sector_id: str):
     return result
 
 
-@router.get("/explanation/{sector_id}")
+@router.get("/explanation/{sector_id}", response_model=ExplanationResponse)
 def get_explanation(sector_id: str):
     """
     Returns a human-readable explanation of why a sector has its current threat level.
@@ -48,4 +50,12 @@ def get_explanation(sector_id: str):
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate explanation: {e}")
-        
+@router.get("/alerts")
+def get_alerts():
+    """
+    Returns all raw alerts from the sensor/detection data.
+    """
+    try:
+        return load_alerts()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch alerts: {e}")
