@@ -79,7 +79,7 @@ export default function SettingsPage() {
   };
 
   const handleReset = () => {
-    setSettings(DEFAULT_SETTINGS);
+    setSettings(structuredClone(DEFAULT_SETTINGS));
     setDirty(true);
     setSavedAt(null);
   };
