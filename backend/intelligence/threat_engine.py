@@ -116,3 +116,6 @@ def assess_sector(sector: dict, alerts: list) -> dict:
     Alias for calculate_threat_score. Backend can call either.
     """
     return calculate_threat_score(sector, alerts)
+# Additional alias for backend compatibility
+assess_threat = assess_sector 
+    
