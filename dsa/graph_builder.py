@@ -1,9 +1,10 @@
 import networkx as nx
 import random
-import json
+from sqlalchemy import select
 
+from backend.db import SessionLocal
+from backend.models import Sector, Alert
 from backend.intelligence.threat_engine import calculate_threat_score
-
 
 def build_absip_graph(sector_data):
     G = nx.Graph()
@@ -126,21 +127,60 @@ def calculate_edge_cost(source_data, destination_data, distance):
         cost += 3
     return cost
 def load_sector_data():
+    db = SessionLocal()
 
-    with open("data/sectors.json", "r") as f:
-        sectors = json.load(f)
+    sectors = db.execute(select(Sector)).scalars().all()
 
-    return sectors
+    result = []
+
+    for s in sectors:
+        result.append(
+            {
+                "sector_id": s.sector_id,
+                "sector_name": s.sector_name,
+                "latitude": s.latitude,
+                "longitude": s.longitude,
+                "terrain_type": s.terrain_type,
+                "weather_condition": s.weather_condition,
+                "visibility_level": s.visibility_level,
+                "historical_risk_score": s.historical_risk_score,
+                "patrol_gap_hours": s.patrol_gap_hours,
+                "active_threat_designation": s.active_threat_designation,
+                "area_sq_km": s.area_sq_km,
+                "last_incident_date": s.last_incident_date,
+            }
+        )
+
+    db.close()
+    return result
 
 
 
 def load_alerts():
+    db = SessionLocal()
 
-    with open("data/alerts.json", "r") as f:
-        alerts = json.load(f)
+    alerts = db.execute(select(Alert)).scalars().all()
 
-    return alerts
+    result = []
 
+    for a in alerts:
+        result.append(
+            {
+                "alert_id": a.alert_id,
+                "sector_id": a.sector_id,
+                "sensor_id": a.sensor_id,
+                "event_type": a.event_type,
+                "confidence": float(a.confidence),
+                "threat_score": a.threat_score,
+                "threat_level": a.threat_level,
+                "alert_status": a.alert_status,
+                "timestamp": a.timestamp,
+                "recommended_action": a.recommended_action,
+            }
+        )
+
+    db.close()
+    return result
 
 
 def attach_alerts(sectors, alerts):

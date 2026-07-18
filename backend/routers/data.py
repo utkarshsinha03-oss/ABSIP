@@ -1,32 +1,39 @@
 from fastapi import APIRouter
-import json
-from pathlib import Path
+from sqlalchemy import select
+
+from backend.db import SessionLocal
+from backend.models import Sensor, Incident, Patrol, PatrolLog
 
 router = APIRouter(tags=["Data"])
-
-DATA_DIR = Path(__file__).resolve().parents[2] / "data"
-
-
-def load_json(filename):
-    with open(DATA_DIR / filename, "r", encoding="utf-8") as f:
-        return json.load(f)
 
 
 @router.get("/sensors")
 def get_sensors():
-    return load_json("sensors.json")
+    db = SessionLocal()
+    data = db.execute(select(Sensor)).scalars().all()
+    db.close()
+    return data
 
 
 @router.get("/incidents")
 def get_incidents():
-    return load_json("incidents.json")
+    db = SessionLocal()
+    data = db.execute(select(Incident)).scalars().all()
+    db.close()
+    return data
 
 
 @router.get("/patrols")
 def get_patrols():
-    return load_json("patrols.json")
+    db = SessionLocal()
+    data = db.execute(select(Patrol)).scalars().all()
+    db.close()
+    return data
 
 
 @router.get("/patrol-logs")
 def get_patrol_logs():
-    return load_json("patrol_logs.json")
+    db = SessionLocal()
+    data = db.execute(select(PatrolLog)).scalars().all()
+    db.close()
+    return data
