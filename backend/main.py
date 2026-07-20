@@ -6,6 +6,7 @@ Planning/DSA module (graph, ranking, patrol dispatch) into a
 single FastAPI application.
 """
 
+from dsa.patrol_manager import generate_patrol_plan
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -38,6 +39,10 @@ def root():
 @app.get("/health")
 def health():
     return {"status": "ok", "service": "RAKSHAK / ABSIP API"}
+
+@app.get("/patrol-plan")
+def get_patrol_plan():
+    return generate_patrol_plan()
 
 
 if __name__ == "__main__":

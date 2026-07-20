@@ -1,5 +1,6 @@
 import networkx as nx
 import random
+import math
 from sqlalchemy import select
 
 from backend.db import SessionLocal
@@ -17,11 +18,19 @@ def build_absip_graph(sector_data):
         )
 
         G.add_node(
+
            sector_id,
 
            threat_score = threat_result["score"],
 
            threat_level = threat_result["level"],
+
+           latitude=sector.get("latitude"),
+
+           longitude=sector.get("longitude"),
+
+           terrain_type=sector.get("terrain_type", "Plain"),
+
 
            score_breakdown = threat_result.get(
               "score_breakdown",
@@ -66,18 +75,24 @@ def build_absip_graph(sector_data):
         source = sectors[i]
         destination = sectors[i+1]
 
+        distance = calculate_distance(
+            G.nodes[source],
+            G.nodes[destination]
+         )
+
         cost = calculate_edge_cost(
              G.nodes[source],
              G.nodes[destination],
-             random.randint(1,10)
+             distance
         )
         G.add_edge(
             source,
             destination,
-            weight=cost
+            weight=cost,
+            distance=distance            
         )
 
-
+    random.seed(42)
     extra_edges = len(sectors)//2
 
     for _ in range(extra_edges):
@@ -88,44 +103,96 @@ def build_absip_graph(sector_data):
 
         if not G.has_edge(a,b):
 
+            distance = calculate_distance(
+                G.nodes[a],
+                G.nodes[b]
+            )
+
             cost = calculate_edge_cost(
                 G.nodes[a],
-                 G.nodes[b],
-                 random.randint(1,10)
+                G.nodes[b],
+                distance
             )
             G.add_edge(
                 a,
                 b,
-                weight=cost
+                weight=cost,
+                distance=distance
             )
 
     return G
+
+def calculate_distance(source_data, destination_data):
+    lat1 = source_data["latitude"]
+    lon1 = source_data["longitude"]
+
+    lat2 = destination_data["latitude"]
+    lon2 = destination_data["longitude"]
+
+    return math.sqrt(
+        (lat2 - lat1) ** 2 +
+        (lon2 - lon1) ** 2
+    )
+
 def calculate_edge_cost(source_data, destination_data, distance):
 
     cost = distance
+
     threat = max(
         source_data["threat_score"],
         destination_data["threat_score"]
     )
 
-    cost += threat * 0.1
+    # Increased threat influence
+    cost += threat * 0.15
 
-    if destination_data["weather"] in [
-        "Storm",
-        "Fog",
-        "Dust Storm"
-    ]:
-        cost += 5
-    if source_data["weather"] in [
-        "Storm",
-        "Fog",
-        "Dust Storm"
-    ]:
-        cost += 5
+    terrain_penalty = {
+        "Plain": 0,
+        "Grassland": 1,
+        "Forest": 3,
+        "Hills": 4,
+        "Mountain": 6,
+        "River": 5,
+        "Desert": 4
+    }
 
-    if destination_data["visibility"] == "Low":
-        cost += 3
-    return cost
+    cost += terrain_penalty.get(
+        destination_data["terrain_type"],
+        2
+    )
+
+    weather_penalty = {
+        "Clear": 0,
+        "Rain": 2,
+        "Snow": 3,
+        "Fog": 5,
+        "Storm": 6,
+        "Dust Storm": 5
+    }
+
+    cost += weather_penalty.get(
+        destination_data["weather"],
+        0
+    )
+
+    cost += weather_penalty.get(
+        source_data["weather"],
+        0
+    )
+
+    visibility_penalty = {
+        "High": 0,
+        "Medium": 2,
+        "Low": 5
+    }
+
+    cost += visibility_penalty.get(
+        destination_data["visibility"],
+        0
+    )
+
+    return round(cost, 2)
+
 def load_sector_data():
     db = SessionLocal()
 
