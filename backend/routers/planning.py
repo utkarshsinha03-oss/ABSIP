@@ -2,7 +2,9 @@
 Planning Router — endpoints powered by the DSA/Planning module.
 """
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
+from backend.auth.dependency import get_current_user
+from backend.models import User
 from typing import List
 from backend.models.schemas import SectorThreat
 
@@ -16,7 +18,9 @@ router = APIRouter(prefix="", tags=["Planning"])
 
 
 @router.get("/ranked-sectors", response_model=List[SectorThreat])
-def ranked_sectors():
+def ranked_sectors(
+    current_user: User = Depends(get_current_user)
+):
     """
     Returns all sectors ranked by threat score (highest first).
     """
@@ -27,7 +31,10 @@ def ranked_sectors():
 
 
 @router.get("/top-threats", response_model=List[SectorThreat])
-def top_threats(limit: int = 5):
+def top_threats(
+    limit: int = 5,
+    current_user: User = Depends(get_current_user)
+):
     """
     Returns the top N highest-threat sectors. Default: 5.
     """
@@ -43,7 +50,9 @@ def top_threats(limit: int = 5):
 
 
 @router.get("/patrol-assignments")
-def patrol_assignments():
+def patrol_assignments(
+    current_user: User = Depends(get_current_user)
+):
     """
     Returns the recommended patrol dispatch plan
     (which patrol should go to which high-threat sector, and the route).
@@ -54,7 +63,9 @@ def patrol_assignments():
         raise HTTPException(status_code=500, detail=f"Failed to assign patrols: {e}")
 
 @router.get("/sectors")
-def all_sectors():
+def all_sectors(
+    current_user: User = Depends(get_current_user)
+):
     """
     Returns all sectors with their current threat data (same as ranked-sectors,
     but without sorting guarantee — raw list).

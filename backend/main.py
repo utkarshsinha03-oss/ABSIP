@@ -9,7 +9,7 @@ single FastAPI application.
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.routers import intelligence, planning , data
+from backend.routers import intelligence, planning , data , auth
 
 
 app = FastAPI(title="RAKSHAK / ABSIP API", version="2.0.0")
@@ -29,6 +29,7 @@ app.add_middleware(
 app.include_router(intelligence.router)
 app.include_router(planning.router)
 app.include_router(data.router)
+app.include_router(auth.router)
 
 @app.get("/")
 def root():
