@@ -21,7 +21,13 @@ function SkeletonItems({ count = 4 }) {
   ));
 }
 
-export default function AlertsPanel({ alerts, loading, error, onRetry }) {
+export default function AlertsPanel({
+  alerts,
+  loading,
+  error,
+  onRetry,
+  onAlertClick,
+}) {
   return (
     <div className={styles.panel}>
       <div className={styles.panelHeader}>
@@ -29,6 +35,7 @@ export default function AlertsPanel({ alerts, loading, error, onRetry }) {
           <BellRing size={15} strokeWidth={1.5} />
           <span>RECENT ALERTS</span>
         </div>
+
         {!loading && !error && (
           <span className={styles.count}>{alerts.length} ACTIVE</span>
         )}
@@ -37,7 +44,10 @@ export default function AlertsPanel({ alerts, loading, error, onRetry }) {
       <div className={styles.list}>
         {error && error !== 'backend_offline' ? (
           <div className={styles.stateWrap}>
-            <ErrorCard message="Unable to retrieve alert data." onRetry={onRetry} />
+            <ErrorCard
+              message="Unable to retrieve alert data."
+              onRetry={onRetry}
+            />
           </div>
         ) : loading ? (
           <SkeletonItems />
@@ -50,6 +60,7 @@ export default function AlertsPanel({ alerts, loading, error, onRetry }) {
         ) : (
           alerts.slice(0, 8).map((alert, idx) => {
             const color = getThreatColor(alert.threat_level);
+
             return (
               <motion.div
                 key={alert.id ?? idx}
@@ -57,23 +68,49 @@ export default function AlertsPanel({ alerts, loading, error, onRetry }) {
                 initial={{ opacity: 0, x: 8 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.05, duration: 0.25 }}
+                onClick={() => onAlertClick?.(alert)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    onAlertClick?.(alert);
+                  }
+                }}
+                style={{ cursor: 'pointer' }}
               >
                 <div
                   className={styles.severityBar}
-                  style={{ background: color, boxShadow: `0 0 8px ${color}80` }}
+                  style={{
+                    background: color,
+                    boxShadow: `0 0 8px ${color}80`,
+                  }}
                   aria-hidden="true"
                 />
-                <div className={styles.itemIcon} style={{ borderColor: `${color}40` }}>
-                  <AlertCircle size={14} style={{ color }} strokeWidth={2} />
+
+                <div
+                  className={styles.itemIcon}
+                  style={{ borderColor: `${color}40` }}
+                >
+                  <AlertCircle
+                    size={14}
+                    style={{ color }}
+                    strokeWidth={2}
+                  />
                 </div>
+
                 <div className={styles.itemBody}>
                   <span className={styles.itemTitle}>{alert.title}</span>
+
                   <span className={styles.itemMeta}>
                     <span className={styles.sector}>{alert.sector}</span>
                     <span className={styles.dot} aria-hidden="true">·</span>
-                    <span className={styles.time}>{timeAgo(alert.timestamp)}</span>
+                    <span className={styles.time}>
+                      {timeAgo(alert.timestamp)}
+                    </span>
                   </span>
                 </div>
+
                 <ThreatBadge level={alert.threat_level} size="sm" />
               </motion.div>
             );

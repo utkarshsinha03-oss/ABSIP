@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useRef } from 'react';
 import { Siren, Bell, ShieldAlert, Activity } from 'lucide-react';
 import { useSectors } from '../../hooks/useSectors';
 import { useAlerts } from '../../hooks/useAlerts';
@@ -23,6 +23,29 @@ export default function DashboardPage() {
   const { sectors, loading: sLoad, error: sErr, refetch: refetchSectors } = useSectors();
   const { alerts,  loading: aLoad, error: aErr, refetch: refetchAlerts  } = useAlerts();
   const backendStatus = useBackendStatus();
+  const alertsSectionRef = useRef(null);
+const [alertFilter, setAlertFilter] = useState('all');
+
+const displayedAlerts = useMemo(() => {
+  if (alertFilter === 'critical') {
+    return alerts.filter(
+      (alert) => alert.threat_level?.toLowerCase() === 'critical'
+    );
+  }
+
+  return alerts;
+}, [alerts, alertFilter]);
+
+const showAlerts = (filter) => {
+  setAlertFilter(filter);
+
+  setTimeout(() => {
+    alertsSectionRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }, 0);
+};
 
   const highestThreat = useMemo(() => {
     const order = ['critical', 'high', 'medium', 'low'];
@@ -95,6 +118,7 @@ export default function DashboardPage() {
             sub="REQUIRE IMMEDIATE ACTION"
             accent={criticalCount > 0 ? 'critical' : 'low'}
             loading={aLoad}
+            onClick={() => showAlerts('critical')}
           />
         </div>
         <div className={styles.statCardWrap}>
@@ -134,9 +158,9 @@ export default function DashboardPage() {
       </div>
 
       {/* Primary — Alerts is the visual anchor of the dashboard */}
-      <div className={styles.alertsPrimary}>
+      <div className={styles.alertsPrimary} ref={alertsSectionRef}>
         <AlertsPanel
-          alerts={alerts}
+          alerts={displayedAlerts}
           loading={aLoad}
           error={aErr !== 'backend_offline' ? aErr : null}
           onRetry={refetchAlerts}
