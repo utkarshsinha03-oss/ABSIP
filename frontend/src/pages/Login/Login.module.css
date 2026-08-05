@@ -1,0 +1,584 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--color-void);
+}
+
+/* ── Background artwork layer ─────────────────────────────── */
+.bgLayer {
+  position: absolute;
+  inset: -2%;
+  z-index: 0;
+  will-change: transform;
+}
+
+.bgImage {
+  width: 116%;
+  height: 122%;
+  object-fit: cover;
+  object-position: 58% 40%;
+  filter: saturate(1.1) contrast(1.08);
+  will-change: transform;
+}
+
+.artworkBloom {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(380px 380px at 70% 43%, rgba(255, 205, 120, 0.4) 0%, rgba(255, 176, 70, 0.16) 34%, transparent 68%),
+    radial-gradient(860px 680px at 70% 43%, rgba(245, 166, 35, 0.1) 0%, transparent 60%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* ── Readability + cinematic depth overlays ───────────────── */
+.gradientVignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    radial-gradient(125% 100% at 70% 43%, transparent 40%, rgba(2, 8, 17, 0.3) 72%, rgba(1, 5, 11, 0.68) 100%),
+    radial-gradient(140% 100% at 50% 100%, rgba(1, 5, 11, 0.5) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.gradientLR {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 7, 15, 0.97) 0%,
+      rgba(2, 7, 15, 0.9) 26%,
+      rgba(2, 7, 15, 0.72) 46%,
+      rgba(2, 7, 15, 0.5) 62%,
+      rgba(2, 7, 15, 0.32) 100%
+    );
+}
+
+.gradientBottom {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    0deg,
+    rgba(2, 7, 15, 0.85) 0%,
+    rgba(2, 7, 15, 0.35) 13%,
+    transparent 28%
+  );
+  pointer-events: none;
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(33, 150, 243, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(33, 150, 243, 0.012) 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: 0.3;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+.grainOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  opacity: 0.012;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  background-image:
+    repeating-conic-gradient(
+      rgba(255, 255, 255, 0.35) 0% 0.015%,
+      transparent 0% 0.05%
+    );
+  background-size: 6px 6px;
+}
+
+/* ── Radar sweep ───────────────────────────────────────────── */
+.radarSweep {
+  position: absolute;
+  top: 43%;
+  left: 70%;
+  width: 760px;
+  height: 760px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: conic-gradient(
+    from 0deg,
+    rgba(245, 205, 130, 0.12) 0deg,
+    rgba(245, 205, 130, 0.03) 16deg,
+    transparent 50deg,
+    transparent 360deg
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.radarRing {
+  position: absolute;
+  top: 43%;
+  left: 70%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 205, 130, 0.12);
+  pointer-events: none;
+}
+
+/* ── Particles ─────────────────────────────────────────────── */
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-gold-300);
+  box-shadow: 0 0 6px rgba(245, 166, 35, 0.6);
+}
+
+/* ── Mission-lock HUD frame ────────────────────────────────── */
+.hudFrame {
+  position: absolute;
+  inset: var(--space-8);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hudCornerTL,
+.hudCornerTR,
+.hudCornerBL,
+.hudCornerBR {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  opacity: 0.3;
+}
+
+.hudCornerTL {
+  top: 0;
+  left: 0;
+  border-top: 1px solid var(--color-gold-300);
+  border-left: 1px solid var(--color-gold-300);
+}
+
+.hudCornerTR {
+  top: 0;
+  right: 0;
+  border-top: 1px solid var(--color-gold-300);
+  border-right: 1px solid var(--color-gold-300);
+}
+
+.hudCornerBL {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid var(--color-gold-300);
+  border-left: 1px solid var(--color-gold-300);
+}
+
+.hudCornerBR {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid var(--color-gold-300);
+  border-right: 1px solid var(--color-gold-300);
+}
+
+@media (max-width: 900px) {
+  .hudFrame {
+    display: none;
+  }
+}
+
+/* ── Foreground content ───────────────────────────────────── */
+.content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+/* ── Login panel ───────────────────────────────────────────── */
+.panel {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 2.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+  box-shadow:
+    0 24px 60px -24px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  overflow: hidden;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(245, 166, 35, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.panelHead {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.logoWrap {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hexIcon {
+  color: var(--color-blue-500);
+  filter: drop-shadow(0 0 12px rgba(33, 150, 243, 0.55));
+}
+
+.hexInner {
+  position: absolute;
+  inset: 7px;
+  background: var(--color-blue-600);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  opacity: 0.28;
+}
+
+.navBrandText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--text-primary);
+}
+
+.brandSub {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+.classification {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-300);
+  background: rgba(245, 166, 35, 0.07);
+  border: 1px solid rgba(245, 166, 35, 0.26);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  margin-bottom: var(--space-5);
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f4ede0 55%, #e7cfa2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: var(--space-2) 0 0;
+}
+
+/* ── Form ──────────────────────────────────────────────────── */
+.form {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: var(--space-7);
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.formLabel {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.formFieldBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formFieldBar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--color-gold-300), var(--color-blue-300));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.formFieldBar:focus-within::after {
+  transform: scaleX(1);
+}
+
+.formFieldIcon {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
+.formFieldBar:focus-within .formFieldIcon {
+  color: var(--color-gold-300);
+}
+
+.formInput {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.6rem 2px;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  transition: border-color 0.25s ease;
+}
+
+.formInput::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.formFieldBar:focus-within .formInput {
+  border-bottom-color: transparent;
+  outline: none;
+}
+
+.formInput:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.togglePasswordBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 4px;
+  margin-bottom: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.togglePasswordBtn:hover {
+  color: var(--color-gold-300);
+}
+
+.togglePasswordBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Error message ─────────────────────────────────────────── */
+.formErrorBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.08);
+  color: var(--color-critical);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.formErrorBox svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Submit button (matches landing enterBtn) ─────────────── */
+.enterBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: linear-gradient(180deg, var(--color-gold-300) 0%, var(--color-gold-500) 100%);
+  border: 1px solid rgba(255, 214, 130, 0.5);
+  color: #1a1206;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.2s ease, filter 0.2s ease;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.45) inset,
+    0 0 0 rgba(245, 166, 35, 0);
+}
+
+.enterBtn:hover:not(:disabled) {
+  filter: brightness(1.05);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 0 32px rgba(245, 166, 35, 0.45),
+    0 14px 26px -10px rgba(245, 166, 35, 0.4);
+  transform: translateY(-1px);
+}
+
+.enterBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.enterBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+}
+
+.spinIcon {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Footnote ──────────────────────────────────────────────── */
+.panelFootNote {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-7);
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-low);
+  box-shadow: 0 0 8px var(--color-low);
+  animation: statusPulse 2.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 560px) {
+  .panel {
+    padding: 2rem;
+    border-radius: 16px;
+  }
+  .radarSweep, .radarRing {
+    left: 50%;
+    top: 28%;
+  }
+  .gradientLR {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 7, 15, 0.6) 0%,
+      rgba(2, 7, 15, 0.9) 45%,
+      rgba(2, 7, 15, 0.97) 100%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bgImage,
+  .radarSweep,
+  .particle,
+  .statusDot,
+  .spinIcon {
+    animation: none !important;
+    transition: none !important;
+  }
+}

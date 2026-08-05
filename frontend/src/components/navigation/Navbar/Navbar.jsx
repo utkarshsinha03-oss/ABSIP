@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Bell, Wifi, WifiOff, Shield, Clock, Search } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Bell, Wifi, WifiOff, Shield, Clock, Search, LogOut } from 'lucide-react';
+import { useAuth } from '../../../auth/useAuth';
 import { formatTime, formatDate } from '../../../utils/formatDate';
 import { useBackendStatus } from '../../../hooks/useBackendStatus';
 import { useAlerts } from '../../../hooks/useAlerts';
@@ -18,6 +19,16 @@ const ROUTE_TITLES = {
 
 export default function Navbar() {
   const location   = useLocation();
+  const navigate = useNavigate();
+const { user, logout } = useAuth();
+
+const handleLogout = () => {
+  logout();
+  navigate('/login', { replace: true });
+};
+const operatorInitials = user?.username
+  ? user.username.slice(0, 2).toUpperCase()
+  : 'OP';
   const [now, setNow] = useState(new Date());
   const backendStatus = useBackendStatus();
   const { alerts } = useAlerts();
@@ -94,11 +105,26 @@ export default function Navbar() {
           )}
         </button>
 
-        {/* Avatar */}
-        <div className={styles.avatar} aria-label="Operator profile" role="img">
-          <span className={styles.avatarInitials}>OP</span>
-          <div className={styles.avatarOnline} aria-hidden="true" />
-        </div>
+       {/* Operator */}
+<div
+  className={styles.avatar}
+  aria-label={user?.username ? `Operator ${user.username}` : 'Operator profile'}
+  role="img"
+  title={user?.username || 'Operator'}
+>
+  <span className={styles.avatarInitials}>{operatorInitials}</span>
+  <div className={styles.avatarOnline} aria-hidden="true" />
+</div>
+
+{/* Logout */}
+<button
+  className={styles.logoutBtn}
+  onClick={handleLogout}
+  aria-label="Logout"
+  title="Logout"
+>
+  <LogOut size={15} aria-hidden="true" />
+</button>
       </div>
     </header>
   );

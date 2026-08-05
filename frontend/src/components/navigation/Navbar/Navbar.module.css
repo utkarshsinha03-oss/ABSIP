@@ -233,3 +233,27 @@
   .statusText { display: none; }
   .clockDate { display: none; }
 }
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logoutBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.logoutBtn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
