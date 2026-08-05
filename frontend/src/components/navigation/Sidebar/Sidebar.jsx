@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   LayoutDashboard, Radar, ShieldAlert, Users,
   Radio, FileText, Settings, ChevronLeft, ChevronRight,
-  Hexagon, Activity
+  Hexagon, Activity, GitBranch
 } from 'lucide-react';
 import { ROUTES } from '../../../constants/routes';
 import styles from './Sidebar.module.css';
@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { label: 'Dashboard',       path: ROUTES.DASHBOARD,        icon: LayoutDashboard },
   { label: 'Surveillance',    path: ROUTES.SURVEILLANCE,     icon: Radar },
   { label: 'Threat Analysis', path: ROUTES.THREAT_ANALYSIS,  icon: ShieldAlert },
+  { label: 'Planning',        path: ROUTES.PLANNING,         icon: GitBranch },
   { label: 'Personnel',       path: ROUTES.PERSONNEL,        icon: Users },
   { label: 'Communications',  path: ROUTES.COMMUNICATIONS,   icon: Radio },
   { label: 'Reports',         path: ROUTES.REPORTS,          icon: FileText },

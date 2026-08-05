@@ -1,0 +1,307 @@
+.panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.02);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-blue-300);
+}
+
+/* ── Legend ────────────────────────────────────────────────── */
+.legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.body {
+  padding: var(--space-5);
+}
+
+/* ── Network summary row ──────────────────────────────────── */
+.summaryRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.summaryStat {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+/* ── Node grid ─────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  position: relative;
+}
+
+.nodeSlot {
+  position: relative;
+}
+
+.nodeSlotPrimary {
+  z-index: 2;
+}
+
+.node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-3);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.node:hover {
+  border-color: rgba(41, 128, 185, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 14px rgba(33, 150, 243, 0.2);
+  transform: translateY(-2px);
+}
+
+.nodeId {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-blue-300);
+}
+
+.nodeScore {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+/* ── Node badges (Primary / Route) ─────────────────────────── */
+.badgeRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* ── Primary target node ───────────────────────────────────── */
+.primaryLabel {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue-300);
+  background: rgba(33, 150, 243, 0.16);
+  border: 1px solid var(--color-blue-500);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+}
+
+.nodePrimary {
+  border-color: var(--color-blue-500);
+  background: rgba(33, 150, 243, 0.1);
+  box-shadow: 0 0 20px var(--color-blue-glow), inset 0 0 0 1px rgba(33, 150, 243, 0.35);
+}
+
+.nodePrimary:hover {
+  border-color: var(--color-blue-300);
+  box-shadow: 0 0 26px var(--color-blue-glow), inset 0 0 0 1px rgba(33, 150, 243, 0.5);
+}
+
+/* ── Operator-selected node ────────────────────────────────── */
+.nodeSelected {
+  outline: 2px solid var(--color-blue-300);
+  outline-offset: 2px;
+  background: rgba(33, 150, 243, 0.09);
+  box-shadow: 0 0 16px rgba(33, 150, 243, 0.35);
+}
+
+.nodeSelected:hover {
+  outline-color: var(--color-blue-100);
+  box-shadow: 0 0 22px rgba(33, 150, 243, 0.5);
+}
+
+/* Selected + primary target: an explicit combined rule so the two
+   states blend into one deliberate treatment instead of one silently
+   overwriting the other via cascade order. */
+.nodePrimary.nodeSelected {
+  outline: 2px solid var(--color-blue-300);
+  outline-offset: 2px;
+  background: rgba(33, 150, 243, 0.14);
+  box-shadow: 0 0 26px var(--color-blue-glow), inset 0 0 0 1px rgba(33, 150, 243, 0.45);
+}
+
+/* ── Route node ────────────────────────────────────────────── */
+/* Transparent/outlined pill — deliberately distinct from
+   PRIMARY TARGET's solid tinted pill so operators can tell the two
+   badges apart at a glance, even though both share the same size
+   and typography. */
+.routeLabel {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue-300);
+  background: transparent;
+  border: 1px solid var(--color-blue-300);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+}
+
+.nodeRoute {
+  border-color: var(--color-blue-300);
+  background: rgba(33, 150, 243, 0.06);
+  box-shadow: 0 0 14px rgba(33, 150, 243, 0.3);
+}
+
+.nodeRoute:hover {
+  border-color: var(--color-blue-100);
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+}
+
+/* Combined states — explicit rules (by class-count specificity) so
+   every overlap renders one deliberate merged look rather than one
+   state silently winning over another via cascade order. */
+.nodePrimary.nodeRoute {
+  border-color: var(--color-blue-500);
+  background: rgba(33, 150, 243, 0.13);
+  box-shadow: 0 0 24px var(--color-blue-glow), inset 0 0 0 1px rgba(33, 150, 243, 0.4);
+}
+
+.nodePrimary.nodeRoute:hover {
+  border-color: var(--color-blue-300);
+  box-shadow: 0 0 30px var(--color-blue-glow), inset 0 0 0 1px rgba(33, 150, 243, 0.55);
+}
+
+.nodeSelected.nodeRoute {
+  outline: 2px solid var(--color-blue-300);
+  outline-offset: 2px;
+  border-color: var(--color-blue-300);
+  background: rgba(33, 150, 243, 0.11);
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+}
+
+.nodeSelected.nodeRoute:hover {
+  outline-color: var(--color-blue-100);
+  box-shadow: 0 0 26px rgba(33, 150, 243, 0.55);
+}
+
+.nodePrimary.nodeSelected.nodeRoute {
+  outline: 2px solid var(--color-blue-300);
+  outline-offset: 2px;
+  border-color: var(--color-blue-300);
+  background: rgba(33, 150, 243, 0.16);
+  box-shadow: 0 0 30px var(--color-blue-glow), inset 0 0 0 1px rgba(33, 150, 243, 0.5);
+}
+
+.nodePrimary.nodeSelected.nodeRoute:hover {
+  outline-color: var(--color-blue-100);
+  box-shadow: 0 0 36px var(--color-blue-glow), inset 0 0 0 1px rgba(33, 150, 243, 0.6);
+}
+
+/* ── Connector lines to the adjacent node (right) and the node below ── */
+.connectorRight::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: calc(-1 * var(--space-6));
+  width: var(--space-6);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%);
+  z-index: 0;
+  transition: background var(--transition-fast);
+}
+
+.connectorDown::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: calc(-1 * var(--space-6));
+  width: 2px;
+  height: var(--space-6);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+  z-index: 0;
+  transition: background var(--transition-fast);
+}
+
+/* Connected lines feel "alive" when the node is hovered */
+.nodeSlot:hover.connectorRight::after,
+.nodeSlot:hover.connectorDown::before {
+  background: rgba(33, 150, 243, 0.55);
+}
+
+.skeletonNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-3);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+/* Desktop (default): 4 columns, connectors visible */
+
+/* Tablet: 3 columns — connector math above is keyed to a 4-column
+   grid, so lines are dropped here rather than drawn incorrectly */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .connectorRight::after,
+  .connectorDown::before {
+    display: none;
+  }
+}
+
+/* Mobile: 2 columns */
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -11,6 +11,7 @@ const ROUTE_TITLES = {
   '/dashboard':        'Command Dashboard',
   '/surveillance':     'Surveillance Grid',
   '/threat-analysis':  'Threat Analysis',
+  '/planning':         'Adaptive Path Planning',
   '/personnel':        'Personnel Registry',
   '/communications':   'Communications Hub',
   '/reports':          'Intelligence Reports',
