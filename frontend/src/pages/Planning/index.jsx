@@ -9,6 +9,7 @@ import RouteViewer from '../../components/planning/RouteViewer';
 import SectorIntelligence from '../../components/planning/SectorIntelligence';
 import BorderGraph from '../../components/planning/BorderGraph';
 import PlannerAnalytics from '../../components/planning/PlannerAnalytics';
+import ParetoAnalysis from '../../components/planning/ParetoAnalysis';
 import styles from './Planning.module.css';
 
 const pageVariants = {
@@ -122,6 +123,12 @@ export default function PlanningPage() {
           patrolAssignments={patrolAssignments}
         />
       </div>
+
+      <ParetoAnalysis
+        loading={loading}
+        error={error}
+        rankedSectors={rankedSectors}
+      />
     </motion.div>
   );
 }
