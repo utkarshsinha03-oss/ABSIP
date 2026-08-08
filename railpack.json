@@ -3,6 +3,7 @@
   "provider": "python",
   "steps": {
     "install": {
+      "inputs": ["...", { "local": true, "include": ["."] }],
       "commands": [
         "...",
         "pip install -r backend/requirements.txt"
