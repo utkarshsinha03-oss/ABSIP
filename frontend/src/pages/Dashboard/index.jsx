@@ -190,7 +190,12 @@ const showAlerts = (filter) => {
         </div>
       </div>
 
-      <AlertDetailsDrawer alert={selectedAlert} open={drawerOpen} onClose={closeDrawer} />
+      <AlertDetailsDrawer
+        alert={selectedAlert}
+        sector={sectors.find((s) => s.sector_id === selectedAlert?.sector_id) ?? null}
+        open={drawerOpen}
+        onClose={closeDrawer}
+      />
       <SectorDetailsDrawer sector={selectedSector} open={sectorDrawerOpen} onClose={closeSectorDrawer} />
     </div>
   );

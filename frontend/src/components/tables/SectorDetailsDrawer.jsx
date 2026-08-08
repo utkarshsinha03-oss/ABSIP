@@ -3,6 +3,16 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { X } from 'lucide-react';
 import styles from './SectorDetailsDrawer.module.css';
 
+/* score_breakdown keys → display labels, same set/order as AlertDetailsDrawer */
+const SCORE_FIELDS = [
+  { key: 'human_detection',  label: 'Human Detection' },
+  { key: 'vehicle_detection', label: 'Vehicle Detection' },
+  { key: 'visibility',       label: 'Visibility' },
+  { key: 'weather',          label: 'Weather' },
+  { key: 'patrol_gap',       label: 'Patrol Gap' },
+  { key: 'historical_risk',  label: 'Historical Risk' },
+];
+
 const levelAccent = (level) => {
   const l = (level || '').toLowerCase();
   if (l === 'critical') return 'critical';
@@ -37,7 +47,6 @@ export default function SectorDetailsDrawer({ sector, open, onClose }) {
   }, [open, onClose]);
 
   const accent = levelAccent(sector?.threat_level);
-  const scorePct = sector ? toPercent(sector.threat_score) : null;
 
   return (
     <AnimatePresence>
@@ -65,7 +74,7 @@ export default function SectorDetailsDrawer({ sector, open, onClose }) {
             <div className={styles.drawerHead}>
               <div className={styles.drawerHeadText}>
                 <span className={styles.drawerEyebrow}>SECTOR DETAILS</span>
-                <h2 className={styles.drawerTitle}>{sector.id ?? '—'}</h2>
+                <h2 className={styles.drawerTitle}>{sector.sector_id ?? '—'}</h2>
               </div>
               <button
                 type="button"
@@ -82,7 +91,7 @@ export default function SectorDetailsDrawer({ sector, open, onClose }) {
               <div className={styles.summaryGrid}>
                 <div className={styles.summaryItem}>
                   <span className={styles.summaryLabel}>Sector ID</span>
-                  <span className={styles.summaryValue}>{sector.id ?? '—'}</span>
+                  <span className={styles.summaryValue}>{sector.sector_id ?? '—'}</span>
                 </div>
                 <div className={styles.summaryItem}>
                   <span className={styles.summaryLabel}>Threat Score</span>
@@ -98,23 +107,77 @@ export default function SectorDetailsDrawer({ sector, open, onClose }) {
                   <span className={styles.summaryLabel}>Visibility</span>
                   <span className={styles.summaryValue}>{sector.visibility ?? '—'}</span>
                 </div>
+                <div className={styles.summaryItem}>
+                  <span className={styles.summaryLabel}>Weather</span>
+                  <span className={styles.summaryValue}>{sector.weather ?? '—'}</span>
+                </div>
+                <div className={styles.summaryItem}>
+                  <span className={styles.summaryLabel}>Historical Risk</span>
+                  <span className={styles.summaryValue}>
+                    {sector.historical_risk != null ? `${sector.historical_risk}/10` : '—'}
+                  </span>
+                </div>
+                <div className={styles.summaryItem}>
+                  <span className={styles.summaryLabel}>Last Patrol</span>
+                  <span className={styles.summaryValue}>
+                    {sector.last_patrol_hours != null ? `${sector.last_patrol_hours} hrs ago` : '—'}
+                  </span>
+                </div>
               </div>
 
-              {/* Threat Assessment */}
-              {scorePct !== null && (
+              {/* Threat Factor Breakdown */}
+              {sector.score_breakdown && (
                 <div className={styles.section}>
                   <span className={styles.sectionTitle}>THREAT ASSESSMENT</span>
                   <div className={styles.scoreList}>
-                    <div className={styles.scoreRow}>
-                      <div className={styles.scoreRowHead}>
-                        <span className={styles.scoreLabel}>Threat Score</span>
-                        <span className={styles.scoreValue}>{Math.round(scorePct)}%</span>
-                      </div>
-                      <div className={styles.scoreTrack}>
-                        <div className={styles.scoreFill} style={{ width: `${scorePct}%` }} />
-                      </div>
-                    </div>
+                    {SCORE_FIELDS.map(({ key, label }) => {
+                      const pct = toPercent(sector.score_breakdown?.[key]);
+                      if (pct === null) return null;
+                      return (
+                        <div key={key} className={styles.scoreRow}>
+                          <div className={styles.scoreRowHead}>
+                            <span className={styles.scoreLabel}>{label}</span>
+                            <span className={styles.scoreValue}>{Math.round(pct)}%</span>
+                          </div>
+                          <div className={styles.scoreTrack}>
+                            <div className={styles.scoreFill} style={{ width: `${pct}%` }} />
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
+                </div>
+              )}
+
+              {/* Active Alerts */}
+              {Array.isArray(sector.alerts) && sector.alerts.length > 0 && (
+                <div className={styles.section}>
+                  <span className={styles.sectionTitle}>ACTIVE ALERTS</span>
+                  <ul className={styles.reasonList}>
+                    {sector.alerts.map((a, i) => (
+                      <li key={i} className={styles.reasonItem}>
+                        <span className={styles.reasonBullet} aria-hidden="true" />
+                        {a.event?.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
+                        {' — '}
+                        {Math.round(toPercent(a.confidence) ?? 0)}% confidence
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Reasons */}
+              {Array.isArray(sector.reasons) && sector.reasons.length > 0 && (
+                <div className={styles.section}>
+                  <span className={styles.sectionTitle}>REASONS</span>
+                  <ul className={styles.reasonList}>
+                    {sector.reasons.map((reason, i) => (
+                      <li key={i} className={styles.reasonItem}>
+                        <span className={styles.reasonBullet} aria-hidden="true" />
+                        {reason}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
 

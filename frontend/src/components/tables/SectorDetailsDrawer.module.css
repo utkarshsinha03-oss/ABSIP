@@ -190,6 +190,37 @@
   transition: width 0.5s ease;
 }
 
+/* ── Reason / alert list (shared visual style with AlertDetailsDrawer) ── */
+.reasonList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reasonItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.reasonBullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold-300);
+  box-shadow: 0 0 6px rgba(245, 166, 35, 0.6);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
 /* ── Status summary card ─────────────────────────────────────── */
 .statusCard {
   position: relative;

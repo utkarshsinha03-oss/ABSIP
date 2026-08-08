@@ -37,7 +37,7 @@ const toPercent = (raw) => {
   return Math.max(0, Math.min(100, pct));
 };
 
-export default function AlertDetailsDrawer({ alert, open, onClose }) {
+export default function AlertDetailsDrawer({ alert, sector, open, onClose }) {
   useEffect(() => {
     if (!open) return undefined;
     const handleKey = (e) => {
@@ -125,6 +125,16 @@ export default function AlertDetailsDrawer({ alert, open, onClose }) {
                   <span className={styles.summaryLabel}>Alert Status</span>
                   <span className={styles.summaryValue}>{alert.alert_status ?? '—'}</span>
                 </div>
+                <div className={styles.summaryItem}>
+                  <span className={styles.summaryLabel}>Event Type</span>
+                  <span className={styles.summaryValue}>
+                    {alert.event_type?.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) ?? '—'}
+                  </span>
+                </div>
+                <div className={styles.summaryItem}>
+                  <span className={styles.summaryLabel}>Sensor ID</span>
+                  <span className={styles.summaryValue}>{alert.sensor_id ?? '—'}</span>
+                </div>
                 <div className={`${styles.summaryItem} ${styles.summaryItemFull}`}>
                   <span className={styles.summaryLabel}>Recommended Action</span>
                   <span className={styles.summaryValue}>{alert.recommended_action ?? '—'}</span>
@@ -135,44 +145,56 @@ export default function AlertDetailsDrawer({ alert, open, onClose }) {
                 </div>
               </div>
 
-              {/* AI Threat Analysis */}
-              {alert.score_breakdown && (
-                <div className={styles.section}>
-                  <span className={styles.sectionTitle}>AI Threat Analysis</span>
-                  <div className={styles.scoreList}>
-                    {SCORE_FIELDS.map(({ key, label }) => {
-                      const pct = toPercent(alert.score_breakdown?.[key]);
-                      if (pct === null) return null;
-                      return (
-                        <div key={key} className={styles.scoreRow}>
-                          <div className={styles.scoreRowHead}>
-                            <span className={styles.scoreLabel}>{label}</span>
-                            <span className={styles.scoreValue}>{Math.round(pct)}%</span>
+              {/* Sector Threat Breakdown — this is the enclosing sector's
+                  score breakdown, not a per-alert calculation. Alerts have
+                  no score_breakdown of their own; this reflects the current
+                  threat assessment of the sector this alert belongs to. */}
+              {(() => {
+                const breakdown = alert.score_breakdown ?? sector?.score_breakdown;
+                if (!breakdown) return null;
+                return (
+                  <div className={styles.section}>
+                    <span className={styles.sectionTitle}>SECTOR THREAT BREAKDOWN</span>
+                    <div className={styles.scoreList}>
+                      {SCORE_FIELDS.map(({ key, label }) => {
+                        const pct = toPercent(breakdown?.[key]);
+                        if (pct === null) return null;
+                        return (
+                          <div key={key} className={styles.scoreRow}>
+                            <div className={styles.scoreRowHead}>
+                              <span className={styles.scoreLabel}>{label}</span>
+                              <span className={styles.scoreValue}>{Math.round(pct)}%</span>
+                            </div>
+                            <div className={styles.scoreTrack}>
+                              <div className={styles.scoreFill} style={{ width: `${pct}%` }} />
+                            </div>
                           </div>
-                          <div className={styles.scoreTrack}>
-                            <div className={styles.scoreFill} style={{ width: `${pct}%` }} />
-                          </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              )}
+                );
+              })()}
 
-              {/* AI Reasoning */}
-              {Array.isArray(alert.reasons) && alert.reasons.length > 0 && (
-                <div className={styles.section}>
-                  <span className={styles.sectionTitle}>AI Reasoning</span>
-                  <ul className={styles.reasonList}>
-                    {alert.reasons.map((reason, i) => (
-                      <li key={i} className={styles.reasonItem}>
-                        <span className={styles.reasonBullet} aria-hidden="true" />
-                        {reason}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {/* Sector Threat Reasoning — same provenance note as above:
+                  sourced from the sector's reasons, not the alert itself. */}
+              {(() => {
+                const reasons = alert.reasons?.length ? alert.reasons : sector?.reasons;
+                if (!Array.isArray(reasons) || reasons.length === 0) return null;
+                return (
+                  <div className={styles.section}>
+                    <span className={styles.sectionTitle}>SECTOR THREAT REASONING</span>
+                    <ul className={styles.reasonList}>
+                      {reasons.map((reason, i) => (
+                        <li key={i} className={styles.reasonItem}>
+                          <span className={styles.reasonBullet} aria-hidden="true" />
+                          {reason}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })()}
 
               {/* Operator Recommendation */}
               {alert.recommended_action && (
