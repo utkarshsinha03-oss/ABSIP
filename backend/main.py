@@ -8,19 +8,26 @@ single FastAPI application.
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
 from backend.routers import intelligence, planning , data , auth
 
 
 app = FastAPI(title="RAKSHAK / ABSIP API", version="2.0.0")
 
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+]
+
+frontend_url = os.getenv("FRONTEND_URL", "").strip().rstrip("/")
+if frontend_url and frontend_url not in ALLOWED_ORIGINS:
+    ALLOWED_ORIGINS.append(frontend_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-    ],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
