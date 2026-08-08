@@ -16,6 +16,7 @@ def rank_threats(graph):
                 "sector_id": sector_id,
                 "threat_score": data["threat_score"],
                 "threat_level": data["threat_level"],
+                "score_breakdown": data.get("score_breakdown", {}),
                 "visibility": data["visibility"],
                 "weather": data["weather"],
                 "historical_risk": data["historical_risk"],

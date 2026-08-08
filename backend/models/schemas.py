@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
 from pydantic import BaseModel, EmailStr
 
@@ -12,6 +12,7 @@ class SectorThreat(BaseModel):
     sector_id: str
     threat_score: int
     threat_level: str
+    score_breakdown: dict[str, int] = Field(default_factory=dict)
     visibility: str
     weather: str
     historical_risk: int

@@ -57,6 +57,14 @@ def calculate_threat_score(sector: dict, alerts: list) -> dict:
         }
     """
     score = 0
+    breakdown_raw = {
+        "human_detection": 0,
+        "vehicle_detection": 0,
+        "visibility": 0,
+        "weather": 0,
+        "historical_risk": 0,
+        "patrol_gap": 0,
+    }
 
     # ── 1. Alert-based scores ──────────────────
     for alert in alerts:
@@ -70,25 +78,37 @@ def calculate_threat_score(sector: dict, alerts: list) -> dict:
         event_score = EVENT_SCORES.get(event, 0)
 
         # Scale score by confidence
-        score += int(event_score * confidence)
+        contribution = int(event_score * confidence)
+        score += contribution
+        if event == "human_detected":
+            breakdown_raw["human_detection"] += contribution
+        elif event == "vehicle_detected":
+            breakdown_raw["vehicle_detection"] += contribution
 
     # ── 2. Visibility score ───────────────────
     visibility = sector.get("visibility", "High")
-    score += VISIBILITY_SCORES.get(visibility, 0)
+    visibility_score = VISIBILITY_SCORES.get(visibility, 0)
+    score += visibility_score
+    breakdown_raw["visibility"] = visibility_score
 
     # ── 3. Weather score ──────────────────────
     weather = sector.get("weather", "Clear")
-    score += WEATHER_SCORES.get(weather, 0)
+    weather_score = WEATHER_SCORES.get(weather, 0)
+    score += weather_score
+    breakdown_raw["weather"] = weather_score
 
     # ── 4. Historical risk (multiplier) ───────
     hist_risk = int(sector.get("historical_risk", 0))
-    score += hist_risk * HISTORICAL_RISK_MULTIPLIER
+    historical_score = hist_risk * HISTORICAL_RISK_MULTIPLIER
+    score += historical_score
+    breakdown_raw["historical_risk"] = historical_score
 
     # ── 5. Patrol gap (multiplier) ────────────
     patrol_hours = float(sector.get("last_patrol_hours", 0))
     if patrol_hours > PATROL_GAP_THRESHOLD_HOURS:
         gap_score = int((patrol_hours - PATROL_GAP_THRESHOLD_HOURS) * PATROL_GAP_MULTIPLIER)
         score += gap_score
+        breakdown_raw["patrol_gap"] = gap_score
 
     # ── 6. Cap score between 0 and 100 ────────
     score = max(0, min(100, score))
@@ -99,10 +119,25 @@ def calculate_threat_score(sector: dict, alerts: list) -> dict:
     # ── 8. Generate explanation ───────────────
     explanation = generate_explanation(sector, alerts)
 
+    # ── 9. Normalize each factor to a 0-100 scale for display ──
+    factor_max = {
+        "human_detection": 50,
+        "vehicle_detection": 40,
+        "visibility": 20,
+        "weather": 10,
+        "historical_risk": 20,
+        "patrol_gap": 20,
+    }
+    score_breakdown = {
+        key: max(0, min(100, round((value / factor_max[key]) * 100)))
+        for key, value in breakdown_raw.items()
+    }
+
     return {
         "sector_id": sector.get("sector_id", "UNKNOWN"),
         "score":     score,
         "level":     level,
+        "score_breakdown": score_breakdown,
         "reasons":   explanation["reasons"],
     }
 

@@ -38,10 +38,10 @@ const SCORE_FIELDS = [
 
 /* recommended_action → display group, same taxonomy used by AlertDetailsDrawer's ACTION_ACCENTS */
 const ACTION_GROUPS = [
-  { key: 'emergency response',  label: 'Emergency Response',  icon: Siren,  accent: 'critical' },
-  { key: 'dispatch patrol',     label: 'Dispatch Patrol',      icon: Truck,  accent: 'gold' },
-  { key: 'notify operator',     label: 'Notify Operator',      icon: Radio,  accent: 'blue' },
-  { key: 'continue monitoring', label: 'Continue Monitoring',  icon: ShieldCheck, accent: 'low' },
+  { key: 'emergency_response',  label: 'Emergency Response',  icon: Siren,  accent: 'critical' },
+  { key: 'dispatch_patrol',     label: 'Dispatch Patrol',      icon: Truck,  accent: 'gold' },
+  { key: 'notify_operator',     label: 'Notify Operator',      icon: Radio,  accent: 'blue' },
+  { key: 'continue_monitoring', label: 'Continue Monitoring',  icon: ShieldCheck, accent: 'low' },
 ];
 
 const OVERVIEW_LEVELS = [
@@ -79,8 +79,8 @@ function useThreatAnalysis(alerts, sectors) {
     // ── Threat Factor Breakdown ─────────────────────────────
     const factorAverages = {};
     SCORE_FIELDS.forEach(({ key }) => {
-      const values = alerts
-        .map((a) => toPercent(a.score_breakdown?.[key]))
+      const values = sectors
+        .map((s) => toPercent(s.score_breakdown?.[key]))
         .filter((v) => v !== null);
       factorAverages[key] = values.length
         ? values.reduce((sum, v) => sum + v, 0) / values.length
@@ -124,9 +124,9 @@ function useThreatAnalysis(alerts, sectors) {
       );
     }
     const reasonSet = new Set();
-    alerts
-      .filter((a) => ['critical', 'high'].includes(a.threat_level?.toLowerCase()))
-      .forEach((a) => (Array.isArray(a.reasons) ? a.reasons : []).forEach((r) => reasonSet.add(r)));
+    sectors
+      .filter((s) => ['critical', 'high'].includes(s.threat_level?.toLowerCase()))
+      .forEach((s) => (Array.isArray(s.reasons) ? s.reasons : []).forEach((r) => reasonSet.add(r)));
     Array.from(reasonSet).slice(0, 4).forEach((r) => insights.push(r));
 
     return {
@@ -180,7 +180,7 @@ function RankedSectorRow({ sector, rank }) {
       <span className={styles.sectorRank}>{String(rank + 1).padStart(2, '0')}</span>
       <span className={styles.sectorRowId}>
         <MapPin size={13} strokeWidth={1.75} />
-        {sector.id}
+        {sector.sector_id}
       </span>
       <div className={styles.sectorRowBar}>
         <div className={styles.sectorRowTrack}>
@@ -303,7 +303,7 @@ export default function ThreatAnalysisPage() {
                   ) : (
                     <div className={styles.sectorList}>
                       {rankedSectors.map((s, idx) => (
-                        <RankedSectorRow key={s.id ?? idx} sector={s} rank={idx} />
+                        <RankedSectorRow key={s.sector_id ?? idx} sector={s} rank={idx} />
                       ))}
                     </div>
                   )}
