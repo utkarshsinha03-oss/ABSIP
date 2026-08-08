@@ -26,7 +26,12 @@ def rank_threats(graph):
         )
 
     ranked_sectors.sort(
-        key=lambda sector: sector["threat_score"],
+        key=lambda sector: (
+            sector["threat_score"],
+            sector["last_patrol_hours"],
+            sector["historical_risk"],
+            len(sector["alerts"]),
+        ),
         reverse=True,
     )
 

@@ -1,3 +1,4 @@
+import math
 import networkx as nx
 import random
 from sqlalchemy import select
@@ -5,6 +6,77 @@ from sqlalchemy import select
 from backend.db import SessionLocal
 from backend.models import Sector, Alert
 from backend.intelligence.threat_engine import calculate_threat_score
+
+EARTH_RADIUS_KM = 6371.0
+DEFAULT_DISTANCE_KM = 5.0  # fallback when either sector is missing valid coordinates
+
+TERRAIN_PENALTY = {
+    "Plain": 0,
+    "Grassland": 1,
+    "Forest": 3,
+    "Hills": 4,
+    "Mountain": 6,
+    "River": 5,
+    "Desert": 4,
+}
+
+WEATHER_PENALTY = {
+    "Clear": 0,
+    "Rain": 2,
+    "Snow": 3,
+    "Fog": 5,
+    "Storm": 6,
+    "Dust Storm": 5,
+}
+
+VISIBILITY_PENALTY = {
+    "High": 0,
+    "Medium": 2,
+    "Low": 5,
+}
+
+
+def _safe_float(value):
+    """Convert a DB value to float; returns None if missing or not numeric."""
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def haversine_distance(lat1, lon1, lat2, lon2):
+    """Great-circle distance between two lat/long points, in kilometers."""
+    lat1_rad, lon1_rad = math.radians(lat1), math.radians(lon1)
+    lat2_rad, lon2_rad = math.radians(lat2), math.radians(lon2)
+
+    dlat = lat2_rad - lat1_rad
+    dlon = lon2_rad - lon1_rad
+
+    a = (
+        math.sin(dlat / 2) ** 2
+        + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(dlon / 2) ** 2
+    )
+    c = 2 * math.asin(math.sqrt(a))
+
+    return EARTH_RADIUS_KM * c
+
+
+def calculate_distance(source_data, destination_data):
+    """
+    Real geographic distance (km) between two graph nodes. Falls back to a
+    fixed default if either sector has missing/invalid coordinates, rather
+    than crashing the graph build.
+    """
+    lat1 = source_data.get("latitude")
+    lon1 = source_data.get("longitude")
+    lat2 = destination_data.get("latitude")
+    lon2 = destination_data.get("longitude")
+
+    if lat1 is None or lon1 is None or lat2 is None or lon2 is None:
+        return DEFAULT_DISTANCE_KM
+
+    return haversine_distance(lat1, lon1, lat2, lon2)
+
 
 def build_absip_graph(sector_data):
     G = nx.Graph()
@@ -23,6 +95,12 @@ def build_absip_graph(sector_data):
 
            threat_level = threat_result["level"],
 
+           latitude = _safe_float(sector.get("latitude")),
+
+           longitude = _safe_float(sector.get("longitude")),
+
+           terrain_type = sector.get("terrain_type", "Plain"),
+
            score_breakdown = threat_result.get(
               "score_breakdown",
               {}
@@ -34,7 +112,7 @@ def build_absip_graph(sector_data):
            ),
 
            visibility = sector.get(
-              "visibility_level", 
+              "visibility_level",
               "High"
            ),
 
@@ -66,15 +144,21 @@ def build_absip_graph(sector_data):
         source = sectors[i]
         destination = sectors[i+1]
 
+        distance = calculate_distance(
+            G.nodes[source],
+            G.nodes[destination]
+        )
+
         cost = calculate_edge_cost(
              G.nodes[source],
              G.nodes[destination],
-             random.randint(1,10)
+             distance
         )
         G.add_edge(
             source,
             destination,
-            weight=cost
+            weight=cost,
+            distance=distance
         )
 
 
@@ -88,15 +172,21 @@ def build_absip_graph(sector_data):
 
         if not G.has_edge(a,b):
 
+            distance = calculate_distance(
+                G.nodes[a],
+                G.nodes[b]
+            )
+
             cost = calculate_edge_cost(
                 G.nodes[a],
-                 G.nodes[b],
-                 random.randint(1,10)
+                G.nodes[b],
+                distance
             )
             G.add_edge(
                 a,
                 b,
-                weight=cost
+                weight=cost,
+                distance=distance
             )
 
     return G
@@ -110,22 +200,26 @@ def calculate_edge_cost(source_data, destination_data, distance):
 
     cost += threat * 0.1
 
-    if destination_data["weather"] in [
-        "Storm",
-        "Fog",
-        "Dust Storm"
-    ]:
-        cost += 5
-    if source_data["weather"] in [
-        "Storm",
-        "Fog",
-        "Dust Storm"
-    ]:
-        cost += 5
+    cost += TERRAIN_PENALTY.get(
+        destination_data.get("terrain_type"),
+        2
+    )
 
-    if destination_data["visibility"] == "Low":
-        cost += 3
-    return cost
+    cost += WEATHER_PENALTY.get(
+        destination_data.get("weather"),
+        0
+    )
+    cost += WEATHER_PENALTY.get(
+        source_data.get("weather"),
+        0
+    )
+
+    cost += VISIBILITY_PENALTY.get(
+        destination_data.get("visibility"),
+        0
+    )
+
+    return round(cost, 2)
 def load_sector_data():
     db = SessionLocal()
 
@@ -202,7 +296,7 @@ def attach_alerts(sectors, alerts):
                 .replace("detection", "detected"),
 
                 "confidence": alert["confidence"]
-                
+
             }
         )
 
@@ -314,4 +408,3 @@ if __name__ == "__main__":
     print("Score:", highest[1]["threat_score"])
 
     print("Level:", highest[1]["threat_level"])
-
