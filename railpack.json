@@ -1,15 +1,6 @@
 {
   "$schema": "https://schema.railpack.com",
   "provider": "python",
-  "steps": {
-    "install": {
-      "inputs": ["...", { "local": true, "include": ["."] }],
-      "commands": [
-        "...",
-        "pip install -r backend/requirements.txt"
-      ]
-    }
-  },
   "deploy": {
     "startCommand": "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
   }
